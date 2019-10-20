@@ -1,0 +1,61 @@
+{
+  "name": "$(PROJECT_NAME)",
+  "version": "1.0.0",
+  "description": "A description of your extension",
+  "main": "index.js",
+  "repository": "https://github.io",
+  "author": "bluepropane <yoyozwassup@hotmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "chrome-extension",
+    "chrome",
+    "boilerplate"
+  ],
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dashboard -- webpack --mode=development --watch",
+    "build": "webpack --mode=production",
+    "commit": "git-cz",
+    "release": "standard-version",
+    "pack": "yarn build && bestzip ext.zip ext/",
+    "genss": "node scripts/genss.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@beyonk/google-fonts-webpack-plugin": "^1.2.3",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "bestzip": "^2.1.4",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.0.0",
+    "cz-conventional-changelog": "2.1.0",
+    "eslint": "^6.0.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "js-output-file-webpack-plugin": "^1.1.2",
+    "mini-css-extract-plugin": "^0.7.0",
+    "prettier": "^1.18.2",
+    "puppeteer-core": "^1.18.1",
+    "standard-version": "^6.0.1",
+    "style-loader": "^0.23.1",
+    "svg-inline-loader": "^0.8.0",
+    "terser-webpack-plugin": "^1.3.0",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5",
+    "webpack-dashboard": "^3.0.7",
+    "webpack-shell-plugin": "^0.5.0"
+  },
+  "dependencies": {
+    "preact": "^8.4.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
