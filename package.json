@@ -2,7 +2,7 @@
   "name": "create-chrome-extension",
   "version": "1.0.0",
   "description": "Chrome extensions in a minute",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.io",
   "author": "bluepropane <yoyozwassup@hotmail.com>",
   "license": "MIT",
@@ -12,8 +12,8 @@
     "boilerplate"
   ],
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dashboard -- webpack --mode=development --watch",
-    "build": "webpack --mode=production",
+    "dev": "yarn build -w",
+    "build": "rollup -c rollup.config.js",
     "commit": "git-cz",
     "release": "standard-version",
     "pack": "yarn build && bestzip ext.zip ext/",
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.4.5",
     "babel-eslint": "^10.0.2",
     "babel-plugin-module-resolver": "^3.2.0",
@@ -30,6 +31,10 @@
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "^1.18.2",
     "puppeteer-core": "^1.18.1",
+    "rollup": "^1.25.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "standard-version": "^6.0.1"
   },
   "config": {
@@ -38,6 +43,8 @@
     }
   },
   "dependencies": {
-    "ncp": "^2.0.0"
+    "@babel/runtime": "^7.6.3",
+    "ncp": "^2.0.0",
+    "p-limit": "^2.2.1"
   }
 }

@@ -1,13 +1,6 @@
 {
   "presets": [
-    "@babel/preset-env",
-    [
-      "@babel/preset-react",
-      {
-        "pragma": "h",
-        "throwIfNamespace": false
-      }
-    ]
+    "@babel/preset-env"
   ],
   "plugins": [
     [
@@ -15,11 +8,7 @@
       {
         "root": [
           "./src"
-        ],
-        "alias": {
-          "constants": "./constants.js",
-          "animejs": "animejs/lib/anime.es.js"
-        }
+        ]
       }
     ],
     [
@@ -27,7 +16,6 @@
       {
         "loose": true
       }
-    ],
-    "lodash"
+    ]
   ]
 }
