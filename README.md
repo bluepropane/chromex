@@ -31,35 +31,33 @@
 
 
 
-<!-- PROJECT LOGO -->
+<!-- PROJECT LOGO 
 <br />
 <p align="center">
-  <a href="https://github.com/bluepropane/create-chrome-extension">
+  <!-- <a href="https://github.com/bluepropane/create-chrome-extension">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->-->
 
   <h3 align="center"Create Chrome Extension</h3>
 
-/  <p align="center">
-    YOUR_SHORT_DESCRIPTION
+  <p align="center">
+    Boilerplate generator for fast and easy development of Google Chrome extensions
     <br />
     <a href="https://github.com/bluepropane/create-chrome-extension"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/bluepropane/create-chrome-extension">View Demo</a>
+    <a href="https://github.com/bluepropane/create-chrome-extension/issues">Report Bugs here</a>
     ·
-    <a href="https://github.com/bluepropane/create-chrome-extension/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/bluepropane/create-chrome-extension/issues">Request Feature</a>
+    <a href="https://github.com/bluepropane/create-chrome-extension/issues"> Request features here</a>
   </p>
 </p>
 
 
 
 <!-- TABLE OF COTENTS -->
-## Table of ContentNs
+## Table of Contents
 
-- [Table of ContentNs](#table-of-contentns)
+- [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
   - [Features](#features)
 - [Getting Started](#getting-started)
@@ -129,20 +127,14 @@ See the [open issues](https://github.com/bluepropane/create-chrome-extension/iss
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Contributions are what make the open source community such an amazing ple learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the GNU General Public License. See `LICENSE` for more information.
 
 
 
