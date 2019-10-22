@@ -15,11 +15,7 @@ ncp.limit = CONCURRENCY;
 function copyTemplateFiles({ outputDir }) {
   return new Promise((res, rej) => {
     ncp(TEMPLATE_DIR, outputDir, function(err) {
-      if (err) {
-        rej(err);
-      } else {
-        res();
-      }
+      err ? rej(err) : res();
     });
   });
 }
@@ -62,7 +58,7 @@ function varToRegex(variables) {
   );
 }
 
-async function main(outputDir) {
+export default async function main(outputDir) {
   if (!outputDir) {
     console.log('Usage: create-chrome-extension <project name>');
     return;

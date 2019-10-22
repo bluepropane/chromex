@@ -8,6 +8,7 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    jest: true,
   },
   globals: {
     fetch: 'readonly',
@@ -15,6 +16,9 @@ module.exports = {
     window: 'readonly',
     document: 'readonly',
     DOMParser: 'readonly',
+    page: true,
+    browser: true,
+    context: true,
   },
   parserOptions: {
     ecmaVersion: 7,

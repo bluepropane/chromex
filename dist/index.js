@@ -873,11 +873,7 @@ function copyTemplateFiles(_ref) {
   var outputDir = _ref.outputDir;
   return new Promise(function (res, rej) {
     ncp(TEMPLATE_DIR, outputDir, function (err) {
-      if (err) {
-        rej(err);
-      } else {
-        res();
-      }
+      err ? rej(err) : res();
     });
   });
 }
@@ -1013,3 +1009,5 @@ function _main() {
 }
 
 main(process.argv[2]);
+
+module.exports = main;

@@ -16,8 +16,8 @@
     "build": "rollup -c rollup.config.js",
     "commit": "git-cz",
     "release": "standard-version",
-    "pack": "yarn build && bestzip ext.zip ext/",
-    "genss": "node scripts/genss.js"
+    "genss": "node scripts/genss.js",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -29,6 +29,8 @@
     "cz-conventional-changelog": "2.1.0",
     "eslint": "^6.0.1",
     "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.9.0",
+    "jest-puppeteer": "^4.3.0",
     "prettier": "^1.18.2",
     "puppeteer-core": "^1.18.1",
     "rollup": "^1.25.0",
@@ -45,6 +47,7 @@
   "dependencies": {
     "@babel/runtime": "^7.6.3",
     "ncp": "^2.0.0",
-    "p-limit": "^2.2.1"
+    "p-limit": "^2.2.1",
+    "puppeteer": "^1.20.0"
   }
 }
