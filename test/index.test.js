@@ -10,4 +10,8 @@ describe('', () => {
   test('output dir is created', () => {
     expect(fs.readdirSync(TEST_OUTPUT_DIR)).not.toThrow();
   });
+
+  afterAll(() => {
+    fs.rmdir(TEST_OUTPUT_DIR, { recursive: true });
+  });
 });
