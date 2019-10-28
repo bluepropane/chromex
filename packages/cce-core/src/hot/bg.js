@@ -1,4 +1,4 @@
-import SockJS from 'sockjs-client';
+import './sockjs-client.min';
 
 console.log('init reloader bg');
 
