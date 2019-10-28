@@ -1,0 +1,27 @@
+{
+  "name": "cce-core",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "dev": "yarn build -w"
+  },
+  "dependencies": {
+    "commander": "^3.0.2",
+    "find-up": "^4.1.0",
+    "lodash.merge": "^4.6.2",
+    "sharp": "^0.23.1",
+    "sockjs-client": "^1.4.0",
+    "ws": "^7.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/runtime": "^7.6.3",
+    "rollup": "^1.26.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}

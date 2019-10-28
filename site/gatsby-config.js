@@ -8,9 +8,6 @@ module.exports = {
     twitter: 'https://twitter.com/bluepropane1',
     github: `https://github.com/bluepropane`,
     // medium: 'https://medium.com/@amanhimself',
-    gatsby: 'https://www.gatsbyjs.org/',
-    bulma: 'https://bulma.io/',
-    siteUrl: `https://www.example.com`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',

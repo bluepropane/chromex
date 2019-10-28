@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 import './style.scss';
 
 import gatsbyLogo from '../images/gatsby-icon.png';
-import bulmaLogo from '../images/bulma-logo.png';
+import cceLogo from '../images/cce-logo.svg';
 import Navbar from './navbar';
 
 const Header = ({ siteTitle }) => (
@@ -13,16 +13,18 @@ const Header = ({ siteTitle }) => (
     <div className="hero-body">
       <div className="container center">
         <article className="media">
-          <figure className="is-left">
-            <span className="icon is-large ">
-              <img src={gatsbyLogo} alt="gatsby-logo" />
-            </span>
-          </figure>
-          <figure className="is-left">
-            <span className="icon is-large">
-              <img src={bulmaLogo} alt="bulma-logo" />
-            </span>
-          </figure>
+          <div>
+            <figure className="is-left">
+              <span className="icon is-large ">
+                <img src={gatsbyLogo} alt="gatsby-logo" />
+              </span>
+            </figure>
+            <figure style={{ display: 'block' }}>
+              <span className="icon is-large">
+                <img src={cceLogo} alt="bulma-logo" />
+              </span>
+            </figure>
+          </div>
           <div className="media-content">
             <div className="content">
               <h1 className="is-uppercase is-size-1 has-text-white">

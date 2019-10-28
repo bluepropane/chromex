@@ -79,32 +79,41 @@
 
 ### Features
 
-- Fully working zero configuration prototype in 1 minute
-- ES6 Support
-- Hot reload
+- Fully working, zero configuration prototype in 1 minute
+- ES6/Webpack included
+- Hot reload extension in development
 - [Preact](https://preactjs.com) included
-- Redux included
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
-
 ### Prerequisites
-nodeJS
+nodeJS >= 10
 
 ### Installation
- 
-1. Clone the create-chrome-extension
-```sh
-git clone https:://github.com/bluepropane/create-chrome-extension.git
-```
-2. Install NPM packages
-```sh
-npm install
-```
+
+1. Generate the boilerplate
+
+        npx create-chrome-extension my-extension && cd my-extension
+
+    This command generates a folder with named `my-extension` in the current working directory.
+
+2. Start the development server
+
+        yarn dev
+
+    This command will produce a fully isolated development build of the extension (in `ext/`) that you can load into your chrome browser using the `Load unpacked` method.
+
+3. Load unpacked extension
+
+
+    Navigate to `chrome://extensions` on your chrome browser and click on the `Load unpacked` button. Select the generated `ext/` folder from your project root as the target extension directory.
+
+4. Voila!
+
+    Your extension icon should appear in the extension bar now (top right corner of your chrome window). Click on it to see the boilerplate popup page. You have just completed your first extension environment!
 
 
 

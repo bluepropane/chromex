@@ -4,10 +4,6 @@ const resolve = require('rollup-plugin-node-resolve');
 
 const __DEV__ = process.env.NODE_ENV === 'development';
 
-if (__DEV__) {
-  console.log('Robin is running in dev mode');
-}
-
 module.exports = {
   input: 'src/index.js',
   output: {

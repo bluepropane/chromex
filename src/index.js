@@ -3,11 +3,12 @@ const glob = require('glob');
 const path = require('path');
 const ncp = require('ncp').ncp;
 const pLimit = require('p-limit');
+const cp = require('child_process');
 
 const CONCURRENCY = 16;
 
 const TEMPLATE_DIR = path.join(__dirname, '../template');
-const GLOB_ALL_FILES = '**/*';
+const GLOB_ALL_REPLACEABLE_FILES = '**/*.{js,json}';
 
 const limitPool = pLimit(CONCURRENCY);
 ncp.limit = CONCURRENCY;
@@ -23,7 +24,7 @@ function copyTemplateFiles({ outputDir }) {
 async function replaceTemplateVariables({ outputDir, variables }) {
   const matches = await new Promise((res, rej) => {
     glob(
-      path.join(outputDir, GLOB_ALL_FILES),
+      path.join(outputDir, GLOB_ALL_REPLACEABLE_FILES),
       { nodir: true },
       (err, matches) => {
         if (err) rej(err);
@@ -58,15 +59,37 @@ function varToRegex(variables) {
   );
 }
 
-export default async function main(outputDir) {
+function shell(cmd) {
+  return new Promise((res, rej) => {
+    cp.exec(cmd, (err, out, stderr) => {
+      err ? rej(stderr) : res(out.substring(0, out.length - 1)); // remove newline char
+    });
+  });
+}
+
+async function getUserInfo() {
+  const [name, email] = await Promise.all([
+    shell('git config user.name'),
+    shell('git config user.email'),
+  ]);
+  return {
+    name,
+    email,
+  };
+}
+
+async function main(outputDir) {
   if (!outputDir) {
     console.log('Usage: create-chrome-extension <project name>');
     return;
   }
+  const user = await getUserInfo();
   await copyTemplateFiles({ outputDir });
 
   const TEMPLATE_VARS = {
     PROJECT_NAME: outputDir,
+    USER_NAME: user.name,
+    USER_EMAIL: user.email,
   };
   await replaceTemplateVariables({
     outputDir,
@@ -74,4 +97,5 @@ export default async function main(outputDir) {
   });
 }
 
+module.exports = main;
 main(process.argv[2]);
