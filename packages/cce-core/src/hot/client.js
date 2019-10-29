@@ -1,5 +1,3 @@
-console.log('Include reloader');
-
 function getBrowserContext() {
   if (typeof window !== 'undefined') {
     return window;
@@ -10,10 +8,16 @@ function getBrowserContext() {
   throw new Error('Not in browser context, aborting script');
 }
 
+function log(...args) {
+  console.log('[Hot Reload]', ...args);
+}
+
 (async function() {
   const window = await getBrowserContext();
   const currentTab = await getCurrentTab();
+  log('Initializing hot reload...');
   const socket = new window.WebSocket('ws://localhost:8005');
+  log(`Hot reload active. self id: ${currentTab.id}`);
 
   function getCurrentTab() {
     return new Promise((res, rej) => {
@@ -26,7 +30,7 @@ function getBrowserContext() {
   }
 
   async function reloadExtension() {
-    console.log('Reloading extension');
+    log('Reloading extension');
     const extInfo = new Promise(res => chrome.management.getSelf(res));
 
     if (extInfo.installType === 'development' && extInfo.enabled === true) {
@@ -42,7 +46,7 @@ function getBrowserContext() {
   }
 
   socket.addEventListener('open', function(event) {
-    console.log('connection with reloading server established');
+    log('connection with reloading server established');
     socket.send(
       JSON.stringify({ type: 'HELLO', id: currentTab && currentTab.id })
     );
@@ -50,7 +54,7 @@ function getBrowserContext() {
 
   socket.addEventListener('message', function(event) {
     const msg = JSON.parse(event.data);
-    console.log('Message from server ', msg);
+    log('Message from server ', msg);
     switch (msg.type) {
       case 'RELOAD':
         reloadExtension();

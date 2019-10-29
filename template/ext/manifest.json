@@ -1,1 +1,28 @@
-{"browser_action":{"default_icon":{"16":"icons/icon16.png","19":"icons/icon19.png","48":"icons/icon48.png"},"default_title":"$(PROJECT_NAME)","default_popup":"/Users/liwei.ong/Projects/others/create-chrome-extension/template/ext/popup.html"},"background":{"scripts":["reloaderBg.js"]},"permissions":["tabs"],"name":"$(PROJECT_NAME)","version":"1.0.0","manifest_version":2,"icons":{"16":"icons/icon16.png","48":"icons/icon48.png","128":"icons/icon128.png"},"content_security_policy":"script-src 'self' 'unsafe-eval' https://www.googletagmanager.com  https://www.google-analytics.com; object-src 'self'"}
+{
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "19": "icons/icon19.png",
+      "48": "icons/icon48.png"
+    },
+    "default_title": "$(PROJECT_NAME)",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "reloader.js"
+    ]
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "name": "$(PROJECT_NAME)",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.googletagmanager.com  https://www.google-analytics.com; object-src 'self'"
+}

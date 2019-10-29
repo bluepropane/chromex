@@ -3592,10 +3592,10 @@ js-levenshtein@^1.1.3:
   resolved "https://registry.yarnpkg.com/js-levenshtein/-/js-levenshtein-1.1.6.tgz#c6cee58eb3550372df8deb85fad5ce66ce01d59d"
   integrity sha512-X2BB11YZtrRqY4EnQcLX5Rh373zbK4alC1FW7D7MBhL2gtcC17cTnr6DmfHZeS0s2rTHjUTMMHfG7gO8SSdw+g==
 
-js-output-file-webpack-plugin@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/js-output-file-webpack-plugin/-/js-output-file-webpack-plugin-2.1.0.tgz#84ad5d4208947741fedf6c1c71e4070afff424a5"
-  integrity sha512-Z7yPQsNeY9hir/TmH78+P+fzAOX3z4oFpjR3BihBp7AgxUIFMnz5ODDOAzMcOtQY6exf5PSb6D9apQEP0M7QVg==
+js-output-file-webpack-plugin@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/js-output-file-webpack-plugin/-/js-output-file-webpack-plugin-2.2.0.tgz#ab13df152922313a2649f99d4d59f1967632ba26"
+  integrity sha512-mLKp+dFx7HxXNXB3oHB3wbwgqlWK/mZNhYPRRpq/fSoAFeUmKbR8zgf6vd45eOzGt68novoftU76khuvEBdPKQ==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"

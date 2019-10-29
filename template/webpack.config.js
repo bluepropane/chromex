@@ -22,14 +22,13 @@ const gTagPath = './gtag.js';
 
 const configBuilder = async () => {
   const mainConfig = {
-    context: ext.srcDir,
+    context: path.join(__dirname, ext.srcDir),
     entry: {
       ...(await cce.injectWebpackEntrypoints()),
       gtag: gTagPath,
     },
     output: {
       path: outputDir,
-      libraryTarget: 'umd',
       filename: '[name].js',
     },
     module: {
@@ -98,15 +97,16 @@ const configBuilder = async () => {
       }),
       new PostCompile(async () => {
         console.log('Generating icons for required dimensions...');
-        await fs.promises.mkdir(path.join(outputDir, 'icons')).catch(() => {
+        await fs.promises.mkdir(path.join(outputDir, 'icons')).catch(err => {
           // EEXIST: Thrown when re-bundling is triggered and `icons` dir already exists. We don't care about this, so just proceed
+          console.warn('[Post Compile]', err);
         });
         cce.generateIcons(
           `${ext.srcDir}/assets/icon.png`,
           `${outputDir}/icons`
         );
         fs.promises.copyFile(
-          path.join(ext.srcDir, 'assets', 'icon.png'),
+          path.join(__dirname, ext.srcDir, 'assets', 'icon.png'),
           path.join(outputDir, 'favicon.ico')
         );
       }),

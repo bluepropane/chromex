@@ -7,8 +7,8 @@ const path = require('path');
   USER_EMAIL
 */
 module.exports = {
-  srcDir: path.join(__dirname, 'src'),
-  outputDir: path.join(__dirname, 'ext'),
+  srcDir: 'src',
+  outputDir: 'ext',
   pages: {
     popup: {
       title: '$(PROJECT_NAME)',

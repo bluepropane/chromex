@@ -31,14 +31,14 @@
 
 
 
-<!-- PROJECT LOGO 
+
 <br />
 <p align="center">
-  <!-- <a href="https://github.com/bluepropane/create-chrome-extension">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->-->
+  <a href="https://github.com/bluepropane/create-chrome-extension">
+    <img src="template/src/assets/icon.png" alt="Logo" width="80" height="80">
+  </a>
 
-  <h3 align="center"Create Chrome Extension</h3>
+  <h2 align="center"><code>create-chrome-extension</code></h2>
 
   <p align="center">
     Boilerplate generator for fast and easy development of Google Chrome extensions

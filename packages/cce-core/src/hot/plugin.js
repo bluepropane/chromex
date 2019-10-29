@@ -7,7 +7,6 @@ const defaultOpts = {
 class CCEHotReloadPlugin {
   constructor(opts = {}) {
     opts = Object.assign({}, defaultOpts, opts);
-    this.targetBundles = ['reloaderBg', 'reloaderContent'];
     this.chunkHashes = {};
 
     this.server = new WebSocket.Server({ port: opts.port });
@@ -66,7 +65,7 @@ class CCEHotReloadPlugin {
           this.log(
             compilation,
             'Changes detected in',
-            changes,
+            changes.map(({ id }) => id),
             'reloading extension components'
           );
           await this.broadcastReload();

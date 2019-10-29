@@ -19,10 +19,6 @@ module.exports = {
       'babel-plugin-module-resolver',
       {
         root: ['./src'],
-        alias: {
-          constants: './constants.js',
-          animejs: 'animejs/lib/anime.es.js',
-        },
       },
     ],
     [

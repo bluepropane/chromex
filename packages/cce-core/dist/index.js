@@ -6,7 +6,7 @@ const generateIcons = require('./generateIcons');
 const { PAGE_TYPES } = require('./constants');
 const path = require('path');
 const merge = require('lodash.merge');
-const CCEHotReloadPlugin = require('./CCEHotReloadPlugin');
+const CCEHotReloadPlugin = require('./hot/plugin');
 
 async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
   const ext = await resolveExtConfig();
@@ -14,14 +14,16 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
     .flatMap(([pageType, pageConf]) => {
       switch (pageType) {
         case PAGE_TYPES.POPUP:
+          const chunks = [pageType, 'reloader'].concat(pageConf.scripts || []);
+          console.log('FUCK LA HAHAH FUCK UMOTHER CB', chunks);
           return new HtmlWebpackPlugin({
             template: 'Popup/index.html',
             filename: `popup.html`,
-            chunks: [pageConf.entrypoint].concat(pageConf.scripts || []),
+            chunks,
             hash: true,
             templateParameters: {
               title: pageConf.title || 'Popup Page',
-              gTagPath: path.join(ext.srcDir, 'gtag.js'),
+              gTagPath: path.join(ext.outputDir, 'gtag.js'),
               faviconPath: '',
               ...pageConf.templateParameters,
             },
@@ -34,7 +36,7 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
     })
     .filter(plugins => !!plugins);
 
-  console.log(plugins);
+  console.log('CCE configured plugins:', plugins);
   return plugins;
 }
 
@@ -48,14 +50,14 @@ async function injectWebpackEntrypoints() {
         };
       case PAGE_TYPES.RELOADER_BG:
         return {
-          reloaderBg: './lib/reloader-bg.js',
+          reloader: './lib/reloader-proxy.js',
         };
       default:
         return {};
     }
   });
 
-  console.log(merge({}, ...entrypoints));
+  console.log('CCE configured entrypoints:', merge({}, ...entrypoints));
 
   return merge({}, ...entrypoints);
 }
@@ -75,7 +77,7 @@ async function configureManifest() {
                 '48': 'icons/icon48.png',
               },
               default_title: pageConf.title,
-              default_popup: path.join(ext.outputDir, pageConf.htmlFilename),
+              default_popup: pageConf.htmlFilename,
             },
           };
         case PAGE_TYPES.BG:
@@ -88,7 +90,7 @@ async function configureManifest() {
         case PAGE_TYPES.RELOADER_BG:
           return {
             background: {
-              scripts: ['reloaderBg.js'],
+              scripts: ['reloader.js'],
             },
             permissions: ['management', 'tabs'],
           };

@@ -37,9 +37,16 @@ module.exports = [
     ],
   },
   {
-    input: 'src/hot.js',
+    input: 'src/hot/client.js',
     output: {
-      file: 'dist/hot.js',
+      file: 'dist/hot/client.js',
+      format: 'cjs',
+    },
+  },
+  {
+    input: 'src/hot/plugin.js',
+    output: {
+      file: 'dist/hot/plugin.js',
       format: 'cjs',
     },
     plugins: [
@@ -47,9 +54,7 @@ module.exports = [
         preferConst: true,
         compact: true,
       }),
-      resolve({
-        preferBuiltins: false,
-      }),
+      resolve(),
       commonjs({
         include: 'node_modules/**',
       }),
