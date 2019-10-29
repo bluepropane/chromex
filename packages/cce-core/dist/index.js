@@ -35,6 +35,8 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
     })
     .filter(plugins => !!plugins);
 
+  // Plugin for generating manifest file
+
   console.log('CCE configured plugins:', plugins);
   return plugins;
 }

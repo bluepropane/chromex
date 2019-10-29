@@ -14,4 +14,17 @@ module.exports = {
       htmlFilename: 'popup.html',
     },
   },
+  name: '$(PROJECT_NAME)',
+  manifest: {
+    icons: {
+      '16': 'icons/icon16.png',
+      '48': 'icons/icon48.png',
+      '128': 'icons/icon128.png',
+    },
+    // options_page: 'dist/options_custom.html',
+    // chrome_url_overrides: {
+    //   newtab: 'index.html',
+    // },
+    permissions: ['tabs'],
+  },
 };
