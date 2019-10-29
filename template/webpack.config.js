@@ -29,6 +29,7 @@ const configBuilder = async () => {
     },
     output: {
       path: outputDir,
+      libraryTarget: 'umd',
       filename: '[name].js',
     },
     module: {
@@ -39,7 +40,6 @@ const configBuilder = async () => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env'],
               cacheDirectory: true,
             },
           },

@@ -7,17 +7,34 @@ const defaultOpts = {
 class CCEHotReloadPlugin {
   constructor(opts = {}) {
     opts = Object.assign({}, defaultOpts, opts);
+    this.targetBundles = ['reloaderBg', 'reloaderContent'];
+    this.chunkHashes = {};
 
     this.server = new WebSocket.Server({ port: opts.port });
     console.log('Started CCE hot reload server on port', opts.port);
-    this.targetBundles = ['reloaderBg', 'reloaderContent'];
-    this.chunkHashes = {};
+    this.server.on('connection', this.initSocketConnection);
+  }
+
+  initSocketConnection(socket) {
+    let identity = null;
+    socket.on('message', data => {
+      const msg = JSON.parse(data);
+      switch (msg.type) {
+        case 'HELLO':
+          identity = msg.id;
+      }
+      console.log('Received', msg);
+    });
+
+    socket.on('close', (...args) => {
+      console.log('Socket closed:', identity);
+    });
   }
 
   broadcastReload() {
     this.server.clients.forEach(function(client) {
       if (client.readyState === WebSocket.OPEN) {
-        client.send({ type: 'RELOAD' });
+        client.send(JSON.stringify({ type: 'RELOAD' }));
       }
     });
   }
@@ -32,24 +49,25 @@ class CCEHotReloadPlugin {
     logger(...args);
   }
 
-  hasChanges(chunks) {
-    return (
-      chunks.filter(({ name, hash }) => {
-        const prevHash = this.chunkHashes[name];
-        this.chunkHashes[name] = hash;
-        return hash !== prevHash;
-      }).length > 0
-    );
+  getChanges(chunks) {
+    return chunks.filter(({ name, hash }) => {
+      const prevHash = this.chunkHashes[name];
+      this.chunkHashes[name] = hash;
+      return hash !== prevHash;
+    });
   }
 
   apply(compiler) {
     compiler.hooks.afterEmit.tapPromise(
       'CCEHotReloadPlugin',
       async compilation => {
-        if (this.hasChanges(compilation.chunks)) {
+        const changes = this.getChanges(compilation.chunks);
+        if (changes.length > 0) {
           this.log(
             compilation,
-            'Changes detected, reloading extension components'
+            'Changes detected in',
+            changes,
+            'reloading extension components'
           );
           await this.broadcastReload();
         }

@@ -17,7 +17,7 @@ module.exports = async env => {
     // chrome_url_overrides: {
     //   newtab: 'index.html',
     // },
-    permissions: [],
+    permissions: ['tabs'],
   };
   manifest['content_security_policy'] = `script-src 'self' ${
     DEV ? "'unsafe-eval'" : ''

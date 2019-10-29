@@ -90,6 +90,7 @@ async function configureManifest() {
             background: {
               scripts: ['reloaderBg.js'],
             },
+            permissions: ['management', 'tabs'],
           };
         default:
           return {};

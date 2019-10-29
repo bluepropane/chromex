@@ -31,7 +31,7 @@
     "bestzip": "^2.1.4",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.0.0",
-    "cce-core": "file:../packages/cce-core",
+    "cce-core": "^1.0.0",
     "cz-conventional-changelog": "2.1.0",
     "eslint": "^6.0.1",
     "eslint-plugin-prettier": "^3.1.0",

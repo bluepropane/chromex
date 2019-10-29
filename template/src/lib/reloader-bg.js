@@ -1,3 +1,3 @@
-import 'cce-core/dist/hot/bg';
+import 'cce-core/hot';
 
-console.log('init bg reloader proxy');
+console.log('init bg reloader sdproxy');
