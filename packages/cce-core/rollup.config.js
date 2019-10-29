@@ -37,16 +37,16 @@ module.exports = [
     ],
   },
   {
-    input: 'src/hot/client.js',
+    input: 'src/reloader/client.js',
     output: {
-      file: 'dist/hot/client.js',
+      file: 'dist/reloader/client.js',
       format: 'cjs',
     },
   },
   {
-    input: 'src/hot/plugin.js',
+    input: 'src/reloader/plugin.js',
     output: {
-      file: 'dist/hot/plugin.js',
+      file: 'dist/reloader/plugin.js',
       format: 'cjs',
     },
     plugins: [

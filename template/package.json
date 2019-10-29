@@ -1,6 +1,6 @@
 {
   "name": "template",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A description of your extension",
   "main": "index.js",
   "repository": "https://github.io/$(USER_NAME)",

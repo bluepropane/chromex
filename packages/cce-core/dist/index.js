@@ -6,7 +6,7 @@ const generateIcons = require('./generateIcons');
 const { PAGE_TYPES } = require('./constants');
 const path = require('path');
 const merge = require('lodash.merge');
-const CCEHotReloadPlugin = require('./hot/plugin');
+const CCEReloaderPlugin = require('./reloader/plugin');
 
 async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
   const ext = await resolveExtConfig();
@@ -15,9 +15,8 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
       switch (pageType) {
         case PAGE_TYPES.POPUP:
           const chunks = [pageType, 'reloader'].concat(pageConf.scripts || []);
-          console.log('FUCK LA HAHAH FUCK UMOTHER CB', chunks);
           return new HtmlWebpackPlugin({
-            template: 'Popup/index.html',
+            template: 'pages/Popup/index.html',
             filename: `popup.html`,
             chunks,
             hash: true,
@@ -29,7 +28,7 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
             },
           });
         case PAGE_TYPES.RELOADER_BG:
-          return new CCEHotReloadPlugin();
+          return new CCEReloaderPlugin();
         default:
           return null;
       }

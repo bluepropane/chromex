@@ -11,7 +11,7 @@
     "dev": "yarn build -w"
   },
   "browser": {
-    "./hot/client.js": "./dist/hot/client.js"
+    "./reloader/client.js": "./dist/reloader/client.js"
   },
   "dependencies": {
     "commander": "^3.0.2",

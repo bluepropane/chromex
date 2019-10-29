@@ -1,5 +1,3 @@
-const path = require('path');
-
 /*
   Vars on a global scope:
   PROJECT_NAME
@@ -12,8 +10,8 @@ module.exports = {
   pages: {
     popup: {
       title: '$(PROJECT_NAME)',
-      // entrypoint: 'src/Popup/index.html'
-      // htmlFilename: 'popup.html'
+      entrypoint: './pages/Popup/index.js',
+      htmlFilename: 'popup.html',
     },
   },
 };

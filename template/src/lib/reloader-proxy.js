@@ -1,1 +1,1 @@
-import 'cce-core/hot/client';
+import 'cce-core/reloader/client';

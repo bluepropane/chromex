@@ -4,13 +4,13 @@ const defaultOpts = {
   port: 8005,
 };
 
-class CCEHotReloadPlugin {
+class CCEReloaderPlugin {
   constructor(opts = {}) {
     opts = Object.assign({}, defaultOpts, opts);
     this.chunkHashes = {};
 
     this.server = new WebSocket.Server({ port: opts.port });
-    console.log('Started CCE hot reload server on port', opts.port);
+    console.log('Started CCE reloader-server on port', opts.port);
     this.server.on('connection', this.initSocketConnection);
   }
 
@@ -40,7 +40,7 @@ class CCEHotReloadPlugin {
 
   log(compilation, ...args) {
     let logger = compilation.getLogger
-      ? compilation.getLogger('CCEHotReloadPlugin')
+      ? compilation.getLogger('CCEReloaderPlugin')
       : console.log;
 
     if (typeof logger !== 'function') logger = console.log;
@@ -58,7 +58,7 @@ class CCEHotReloadPlugin {
 
   apply(compiler) {
     compiler.hooks.afterEmit.tapPromise(
-      'CCEHotReloadPlugin',
+      'CCEReloaderPlugin',
       async compilation => {
         const changes = this.getChanges(compilation.chunks);
         if (changes.length > 0) {
@@ -75,4 +75,4 @@ class CCEHotReloadPlugin {
   }
 }
 
-module.exports = CCEHotReloadPlugin;
+module.exports = CCEReloaderPlugin;

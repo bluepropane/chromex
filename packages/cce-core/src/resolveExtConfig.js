@@ -15,7 +15,7 @@ function normalizePageConf(pageConfs) {
       switch (pageType) {
         case PAGE_TYPES.POPUP:
           defaultConf.title = 'Popup Page';
-          defaultConf.entrypoint = './Popup/index.js';
+          defaultConf.entrypoint = './pages/Popup/index.js';
           defaultConf.htmlFilename = 'popup.html';
           break;
         default:

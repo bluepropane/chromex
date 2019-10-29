@@ -35,13 +35,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/bluepropane/create-chrome-extension">
-    <img src="template/src/assets/icon.png" alt="Logo" width="80" height="80">
+    <img src="template/src/assets/icon.png" alt="Logo" width="128" height="128">
   </a>
 
   <h2 align="center"><code>create-chrome-extension</code></h2>
 
   <p align="center">
-    Boilerplate generator for fast and easy development of Google Chrome extensions
+    Fast and easy framework for development of Google Chrome extensions
     <br />
     <a href="https://github.com/bluepropane/create-chrome-extension"><strong>Explore the docs »</strong></a>
     <br />
@@ -58,24 +58,16 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [About The Project](#about-the-project)
   - [Features](#features)
-- [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
+- [Quickstart](#quickstart)
+- [Customizations](#customizations)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 ### Features
 
@@ -86,39 +78,44 @@
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
-
 ### Prerequisites
-nodeJS >= 10
+- `nodeJS >= 10`
+- `Chrome >55`
+- `npm >= 6`
+- `yarn` is the preferred package manager.
 
-### Installation
+## Quickstart
 
 1. Generate the boilerplate
+  
+         npx create-chrome-extension my-extension && cd my-extension
 
-        npx create-chrome-extension my-extension && cd my-extension
-
-    This command generates a folder with named `my-extension` in the current working directory.
+   This command generates a folder with named `my-extension` in the current working directory.
 
 2. Start the development server
+    
+          yarn dev
 
-        yarn dev
+   This command will produce a fully isolated development output of the extension (in `ext/`). If you have followed the official [Getting Started Tutorial][chrome-getting-started-url] for chrome extensions, you will find that the contents in this folder to be very similar to it. that you can load into your chrome browser using the `Load unpacked` method.
 
-    This command will produce a fully isolated development build of the extension (in `ext/`) that you can load into your chrome browser using the `Load unpacked` method.
 
 3. Load unpacked extension
 
+    Navigate to `chrome://extensions` on your chrome browser and click on the `Load unpacked` button (If you don't see it, you might have to enable `Developer mode` on the top right corner of the same page first). Select the generated `ext/` folder from your project root as the target extension directory.
 
-    Navigate to `chrome://extensions` on your chrome browser and click on the `Load unpacked` button. Select the generated `ext/` folder from your project root as the target extension directory.
+    ![load unpacked](https://developer.chrome.com/static/images/get_started/load_extension.png)
+    
+     *image: how to load unpacked extension, grabbed from [Getting Started Tutorial][chrome-getting-started-url]*
+
+
 
 4. Voila!
 
-    Your extension icon should appear in the extension bar now (top right corner of your chrome window). Click on it to see the boilerplate popup page. You have just completed your first extension environment!
+    Your extension icon should appear in the extension bar now (top right corner of your chrome window). Click on it to see the boilerplate popup page. You have just completed setting up your first extension environment!
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+## Customizations
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
@@ -136,7 +133,7 @@ See the [open issues](https://github.com/bluepropane/create-chrome-extension/iss
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing ple learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 
 
@@ -182,3 +179,4 @@ Project Link: [https://github.com/bluepropane/create-chrome-extension](https://g
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
+[chrome-getting-started-url]: https://developer.chrome.com/extensions/getstarted
