@@ -1,0 +1,22 @@
+{
+  "name": "@chromex/reloader",
+  "version": "1.0.0",
+  "description": "Utils for live reloading of chrome extensions during development.",
+  "main": "dist/plugin.js",
+  "browser": {
+    "./client.js": "dist/client.js"
+  },
+  "module": "dist/plugin.js",
+  "scripts": {
+    "dev": "yarn build -w",
+    "build": "rollup"
+  },
+  "keywords": ["hot-reload", "live-reload", "chrome-extension"],
+  "author": "bluepropane <rbluepropane@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^1.26.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}

@@ -3,7 +3,7 @@ const generateIcons = require('./generateIcons');
 const { PAGE_TYPES } = require('./constants');
 const path = require('path');
 const merge = require('lodash.merge');
-const CCEReloaderPlugin = require('./reloader/plugin');
+const CCEReloaderPlugin = require('@chromex/reloader/plugin');
 
 async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
   const ext = await resolveExtConfig();
@@ -24,7 +24,7 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
               ...pageConf.templateParameters,
             },
           });
-        case PAGE_TYPES.RELOADER_BG:
+        case PAGE_TYPES.RELOADER:
           return new CCEReloaderPlugin();
         default:
           return null;
@@ -46,7 +46,7 @@ async function injectWebpackEntrypoints() {
         return {
           popup: pageConf.entrypoint,
         };
-      case PAGE_TYPES.RELOADER_BG:
+      case PAGE_TYPES.RELOADER:
         return {
           reloader: './lib/reloader-proxy.js',
         };
@@ -85,7 +85,7 @@ async function configureManifest() {
               persistent: false,
             },
           };
-        case PAGE_TYPES.RELOADER_BG:
+        case PAGE_TYPES.RELOADER:
           return {
             background: {
               scripts: ['reloader.js'],

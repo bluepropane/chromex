@@ -1,7 +1,8 @@
 {
-  "name": "cce-core",
+  "name": "@chromex/core",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "module": "src/index.js",
   "files": [
     "dist/*"
   ],
@@ -9,9 +10,6 @@
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "dev": "yarn build -w"
-  },
-  "browser": {
-    "./reloader/client.js": "./dist/reloader/client.js"
   },
   "dependencies": {
     "commander": "^3.0.2",

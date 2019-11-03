@@ -8,7 +8,7 @@ export default class App extends Component {
         <div>
           <img src={cceLogo} />
         </div>
-        <h2>My First Extension</h2>
+        <h2>My First Extsension</h2>
       </div>
     );
   }

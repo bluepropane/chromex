@@ -30,7 +30,7 @@ function normalizePageConf(pageConfs) {
     }
   );
 
-  normalizedPageConfs.push({ [PAGE_TYPES.RELOADER_BG]: true });
+  normalizedPageConfs.push({ [PAGE_TYPES.RELOADER]: true });
 
   return merge({}, ...normalizedPageConfs);
 }
