@@ -13,19 +13,17 @@ const PostCompile = require('post-compile-webpack-plugin');
 
 const outputDir = path.join(__dirname, 'ext');
 
-const cce = require('cce-core');
+const chromex = require('@chromex/core');
 const pkg = require('./package.json');
 const ext = require('./extension.config');
 
 const __DEV__ = process.env.NODE_ENV === 'development';
-const gTagPath = './gtag.js';
 
 const configBuilder = async () => {
   const mainConfig = {
     context: path.join(__dirname, ext.srcDir),
     entry: {
-      ...(await cce.injectWebpackEntrypoints()),
-      gtag: gTagPath,
+      ...(await chromex.injectWebpackEntrypoints()),
     },
     output: {
       path: outputDir,
@@ -77,7 +75,7 @@ const configBuilder = async () => {
       new JSOutputFilePlugin({
         sourceFile: 'manifest.json.js',
       }),
-      ...(await cce.injectWebpackPlugins({
+      ...(await chromex.injectWebpackPlugins({
         HtmlWebpackPlugin,
         JSOutputFilePlugin,
       })),
@@ -99,9 +97,9 @@ const configBuilder = async () => {
         console.log('Generating icons for required dimensions...');
         await fs.promises.mkdir(path.join(outputDir, 'icons')).catch(err => {
           // EEXIST: Thrown when re-bundling is triggered and `icons` dir already exists. We don't care about this, so just proceed
-          console.warn('[Post Compile]', err);
+          console.debug('[Post Compile]', err);
         });
-        cce.generateIcons(
+        chromex.generateIcons(
           `${ext.srcDir}/assets/icon.png`,
           `${outputDir}/icons`
         );

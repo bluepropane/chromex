@@ -1,20 +1,24 @@
 {
   "name": "@chromex/core",
-  "version": "1.0.0",
-  "main": "dist/index.js",
+  "version": "0.0.1",
+  "main": "src/index.js",
   "module": "src/index.js",
   "files": [
-    "dist/*"
+    "src/*"
   ],
   "license": "MIT",
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "dev": "yarn build -w"
+    "dev": "yarn build -w",
+    "prepublish": "yarn build"
   },
   "dependencies": {
+    "@chromex/reloader": "^0.0.1",
     "commander": "^3.0.2",
     "find-up": "^4.1.0",
     "lodash.merge": "^4.6.2",
+    "ncp": "^2.0.0",
+    "p-limit": "^2.2.1",
     "sharp": "^0.23.1",
     "ws": "^7.2.0"
   },

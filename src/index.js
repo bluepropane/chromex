@@ -1,63 +1,8 @@
-const fs = require('fs');
-const glob = require('glob');
-const path = require('path');
-const ncp = require('ncp').ncp;
-const pLimit = require('p-limit');
 const cp = require('child_process');
-
-const CONCURRENCY = 16;
+const copyTemplate = require('@chromex/core/src/copyTemplate');
+const path = require('path');
 
 const TEMPLATE_DIR = path.join(__dirname, '../template');
-const GLOB_ALL_REPLACEABLE_FILES = '**/*.{js,json}';
-
-const limitPool = pLimit(CONCURRENCY);
-ncp.limit = CONCURRENCY;
-
-function copyTemplateFiles({ outputDir }) {
-  return new Promise((res, rej) => {
-    ncp(TEMPLATE_DIR, outputDir, function(err) {
-      err ? rej(err) : res();
-    });
-  });
-}
-
-async function replaceTemplateVariables({ outputDir, variables }) {
-  const matches = await new Promise((res, rej) => {
-    glob(
-      path.join(outputDir, GLOB_ALL_REPLACEABLE_FILES),
-      { nodir: true },
-      (err, matches) => {
-        if (err) rej(err);
-        else {
-          res(matches);
-        }
-      }
-    );
-  });
-
-  const tasks = matches.map(match =>
-    limitPool(async () => {
-      let content = (await fs.promises.readFile(match)).toString();
-      variables.forEach(([regex, replaceValue]) => {
-        content = content.replace(regex, replaceValue);
-      });
-
-      fs.promises.writeFile(match, content);
-    })
-  );
-
-  await Promise.all(tasks);
-}
-
-function varToRegex(variables) {
-  return Object.entries(variables).reduce(
-    (accum, [varName, replaceValue]) => [
-      ...accum,
-      [new RegExp(`\\$\\(${varName}\\)`, 'gm'), replaceValue],
-    ],
-    []
-  );
-}
 
 function shell(cmd) {
   return new Promise((res, rej) => {
@@ -84,17 +29,14 @@ async function main(outputDir) {
     return;
   }
   const user = await getUserInfo();
-  await copyTemplateFiles({ outputDir });
 
-  const TEMPLATE_VARS = {
+  const templateVars = {
     PROJECT_NAME: outputDir,
     USER_NAME: user.name,
     USER_EMAIL: user.email,
   };
-  await replaceTemplateVariables({
-    outputDir,
-    variables: varToRegex(TEMPLATE_VARS),
-  });
+
+  copyTemplate(TEMPLATE_DIR, outputDir, templateVars);
 }
 
 module.exports = main;

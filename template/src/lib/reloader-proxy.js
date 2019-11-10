@@ -1,1 +1,1 @@
-import 'cce-core/reloader/client';
+import '@chromex/reloader/client';

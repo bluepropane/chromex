@@ -4,13 +4,13 @@ const defaultOpts = {
   port: 8005,
 };
 
-class CCEReloaderPlugin {
+class ChromexReloaderPlugin {
   constructor(opts = {}) {
     opts = Object.assign({}, defaultOpts, opts);
     this.chunkHashes = {};
 
     this.server = new WebSocket.Server({ port: opts.port });
-    console.log('Started CCE reloader-server on port', opts.port);
+    console.log('Started chromex reloader-server on port', opts.port);
     this.server.on('connection', this.initSocketConnection);
   }
 
@@ -40,7 +40,7 @@ class CCEReloaderPlugin {
 
   log(compilation, ...args) {
     let logger = compilation.getLogger
-      ? compilation.getLogger('CCEReloaderPlugin')
+      ? compilation.getLogger('ChromexReloaderPlugin')
       : console.log;
 
     if (typeof logger !== 'function') logger = console.log;
@@ -58,7 +58,7 @@ class CCEReloaderPlugin {
 
   apply(compiler) {
     compiler.hooks.afterEmit.tapPromise(
-      'CCEReloaderPlugin',
+      'ChromexReloaderPlugin',
       async compilation => {
         const changes = this.getChanges(compilation.chunks);
         if (changes.length > 0) {
@@ -75,4 +75,4 @@ class CCEReloaderPlugin {
   }
 }
 
-module.exports = CCEReloaderPlugin;
+module.exports = ChromexReloaderPlugin;

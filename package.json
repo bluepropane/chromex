@@ -16,9 +16,9 @@
     "build": "rollup -c rollup.config.js",
     "commit": "git-cz",
     "release": "standard-version",
-    "genss": "node scripts/genss.js",
     "test": "jest",
-    "testflow": ". integrationTest.sh"
+    "testflow": ". integrationTest.sh",
+    "setup": "lerna bootstrap --include-filtered-dependencies"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -48,8 +48,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.6.3",
-    "ncp": "^2.0.0",
-    "p-limit": "^2.2.1",
+    "@chromex/core": "^0.0.1",
     "puppeteer": "^1.20.0"
   }
 }

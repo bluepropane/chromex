@@ -3,7 +3,7 @@ const generateIcons = require('./generateIcons');
 const { PAGE_TYPES } = require('./constants');
 const path = require('path');
 const merge = require('lodash.merge');
-const CCEReloaderPlugin = require('@chromex/reloader/plugin');
+const ChromexReloaderPlugin = require('@chromex/reloader');
 
 async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
   const ext = await resolveExtConfig();
@@ -19,13 +19,12 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
             hash: true,
             templateParameters: {
               title: pageConf.title || 'Popup Page',
-              gTagPath: path.join(ext.outputDir, 'gtag.js'),
               faviconPath: '',
               ...pageConf.templateParameters,
             },
           });
         case PAGE_TYPES.RELOADER:
-          return new CCEReloaderPlugin();
+          return new ChromexReloaderPlugin();
         default:
           return null;
       }
@@ -34,7 +33,7 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
 
   // Plugin for generating manifest file
 
-  console.log('CCE configured plugins:', plugins);
+  console.log('chromex configured plugins:', plugins);
   return plugins;
 }
 
@@ -42,20 +41,18 @@ async function injectWebpackEntrypoints() {
   const ext = await resolveExtConfig();
   let entrypoints = Object.entries(ext.pages).map(([pageType, pageConf]) => {
     switch (pageType) {
-      case PAGE_TYPES.POPUP:
-        return {
-          popup: pageConf.entrypoint,
-        };
       case PAGE_TYPES.RELOADER:
         return {
           reloader: './lib/reloader-proxy.js',
         };
       default:
-        return {};
+        return {
+          [pageType]: pageConf.entrypoint,
+        };
     }
   });
 
-  console.log('CCE configured entrypoints:', merge({}, ...entrypoints));
+  console.log('chromex configured entrypoints:', merge({}, ...entrypoints));
 
   return merge({}, ...entrypoints);
 }
@@ -92,6 +89,16 @@ async function configureManifest() {
             },
             permissions: ['management', 'tabs'],
           };
+        case PAGE_TYPES.OPTIONS:
+          return {
+            options_page: pageConf.htmlFilename,
+          };
+        case PAGE_TYPES.NEWTAB_OVERRIDE:
+          return {
+            chrome_url_overrides: {
+              newtab: pageConf.htmlFilename,
+            },
+          };
         default:
           return {};
       }
@@ -99,7 +106,7 @@ async function configureManifest() {
   );
 
   const manifest = merge({}, ...manifestDiffs);
-  console.log('CCE configured manifest fields:', manifest);
+  console.log('chromex configured manifest fields:', manifest);
   return manifest;
 }
 

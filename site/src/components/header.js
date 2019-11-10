@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 import './style.scss';
 
 import gatsbyLogo from '../images/gatsby-icon.png';
-import cceLogo from '../images/cce-logo.svg';
+import chromexLogo from '../images/chromex-logo.svg';
 import Navbar from './navbar';
 
 const Header = ({ siteTitle }) => (
@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
             </figure>
             <figure style={{ display: 'block' }}>
               <span className="icon is-large">
-                <img src={cceLogo} alt="bulma-logo" />
+                <img src={chromexLogo} alt="bulma-logo" />
               </span>
             </figure>
           </div>

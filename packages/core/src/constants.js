@@ -4,5 +4,6 @@ module.exports = {
     BG: 'bg',
     RELOADER: 'reloader',
     OPTIONS: 'options',
+    NEWTAB_OVERRIDE: 'newtab_override',
   },
 };

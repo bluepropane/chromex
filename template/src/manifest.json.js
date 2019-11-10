@@ -1,10 +1,10 @@
 const pkg = require('../package.json');
-const cce = require('cce-core');
+const chromex = require('@chromex/core');
 
 module.exports = async env => {
   const DEV = env === 'development';
   const manifest = {
-    ...(await cce.configureManifest()),
+    ...(await chromex.configureManifest()),
     name: '$(PROJECT_NAME)',
     version: pkg.version,
     manifest_version: 2,
