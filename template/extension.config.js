@@ -1,3 +1,5 @@
+const pkg = require('./package.json');
+
 /*
   Vars on a global scope:
   PROJECT_NAME
@@ -16,15 +18,16 @@ module.exports = {
   },
   name: '$(PROJECT_NAME)',
   manifest: {
+    version: pkg.version,
+    manifest_version: 2,
     icons: {
       '16': 'icons/icon16.png',
       '48': 'icons/icon48.png',
       '128': 'icons/icon128.png',
     },
-    // options_page: 'dist/options_custom.html',
-    // chrome_url_overrides: {
-    //   newtab: 'index.html',
-    // },
     permissions: ['tabs'],
+    content_security_policy: `script-src 'self' ${
+      global.__DEV__ ? "'unsafe-eval'" : ''
+    } https://www.googletagmanager.com  https://www.google-analytics.com; object-src 'self'`,
   },
 };

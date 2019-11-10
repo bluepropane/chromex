@@ -1,9 +1,11 @@
 const resolveExtConfig = require('./resolveExtConfig');
 const generateIcons = require('./generateIcons');
-const { PAGE_TYPES } = require('./constants');
+const { PAGE_TYPES } = require('../constants');
 const path = require('path');
 const merge = require('lodash.merge');
 const ChromexReloaderPlugin = require('@chromex/reloader');
+const copyTemplate = require('./copyTemplate');
+const { capitalize } = require('./utils');
 
 async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
   const ext = await resolveExtConfig();
@@ -105,9 +107,26 @@ async function configureManifest() {
     }
   );
 
-  const manifest = merge({}, ...manifestDiffs);
+  const manifest = merge(
+    {
+      name: ext.name,
+    },
+    ...manifestDiffs
+  );
   console.log('chromex configured manifest fields:', manifest);
   return manifest;
+}
+
+async function generatePage(pageType, outputDir) {
+  const ext = await resolveExtConfig();
+  const targetDirName = capitalize(pageType);
+  await copyTemplate(
+    path.join(__dirname, `./boilerplates/${targetDirName}`),
+    path.join(outputDir, targetDirName),
+    {
+      PROJECT_NAME: ext.name,
+    }
+  );
 }
 
 module.exports = {
@@ -116,4 +135,6 @@ module.exports = {
   injectWebpackEntrypoints,
   configureManifest,
   generateIcons,
+  generatePage,
+  copyTemplate,
 };

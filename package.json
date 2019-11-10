@@ -18,7 +18,7 @@
     "release": "standard-version",
     "test": "jest",
     "testflow": ". integrationTest.sh",
-    "setup": "lerna bootstrap --include-filtered-dependencies"
+    "setup": "lerna bootstrap --include-filtered-dependencies --force-local"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",

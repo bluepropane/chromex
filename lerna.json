@@ -1,7 +1,7 @@
 {
   "packages": ["packages/*", "template", "./"],
   "version": "independent",
-  "npmClient": "yarn",
+  "npmClient": "npm",
   "command": {
     "bootstrap": {
       "npmClientArgs": [

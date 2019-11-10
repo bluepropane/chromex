@@ -8,7 +8,7 @@ export default class App extends Component {
         <div>
           <img src={chromexLogo} />
         </div>
-        <h2>$(PROJECT_NAME)'s Popup Page</h2>
+        <h1 style={{ fontWeight: 200 }}>$(PROJECT_NAME)'s Popup Page</h1>
       </div>
     );
   }

@@ -10,6 +10,7 @@ module.exports = {
     node: true,
   },
   globals: {
+    __DEV__: 'readonly',
     fetch: 'readonly',
     chrome: 'readonly',
     window: 'readonly',

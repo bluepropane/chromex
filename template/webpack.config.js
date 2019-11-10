@@ -17,7 +17,7 @@ const chromex = require('@chromex/core');
 const pkg = require('./package.json');
 const ext = require('./extension.config');
 
-const __DEV__ = process.env.NODE_ENV === 'development';
+global.__DEV__ = process.env.NODE_ENV === 'development';
 
 const configBuilder = async () => {
   const mainConfig = {
@@ -69,6 +69,9 @@ const configBuilder = async () => {
       modules: [path.join(__dirname, 'node_modules')],
     },
     plugins: [
+      new webpack.DefinePlugin({
+        __DEV__,
+      }),
       new CleanWebpackPlugin({
         cleanStaleWebpackAssets: false,
       }),

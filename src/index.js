@@ -1,5 +1,5 @@
 const cp = require('child_process');
-const copyTemplate = require('@chromex/core/src/copyTemplate');
+const { copyTemplate } = require('@chromex/core');
 const path = require('path');
 
 const TEMPLATE_DIR = path.join(__dirname, '../template');

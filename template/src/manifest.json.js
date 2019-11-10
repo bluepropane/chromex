@@ -13,14 +13,10 @@ module.exports = async env => {
       '48': 'icons/icon48.png',
       '128': 'icons/icon128.png',
     },
-    // options_page: 'dist/options_custom.html',
-    // chrome_url_overrides: {
-    //   newtab: 'index.html',
-    // },
     permissions: ['tabs'],
+    content_security_policy: `script-src 'self' ${
+      DEV ? "'unsafe-eval'" : ''
+    } https://www.googletagmanager.com  https://www.google-analytics.com; object-src 'self'`,
   };
-  manifest['content_security_policy'] = `script-src 'self' ${
-    DEV ? "'unsafe-eval'" : ''
-  } https://www.googletagmanager.com  https://www.google-analytics.com; object-src 'self'`;
   return manifest;
 };

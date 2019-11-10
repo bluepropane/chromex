@@ -1,4 +1,5 @@
 {
+  "name": "$(PROJECT_NAME)",
   "browser_action": {
     "default_icon": {
       "16": "icons/icon16.png",
@@ -8,7 +9,6 @@
     "default_title": "$(PROJECT_NAME)",
     "default_popup": "popup.html"
   },
-  "options_page": "./",
   "background": {
     "scripts": [
       "reloader.js"
@@ -17,7 +17,6 @@
   "permissions": [
     "tabs"
   ],
-  "name": "$(PROJECT_NAME)",
   "version": "0.0.1",
   "manifest_version": 2,
   "icons": {
