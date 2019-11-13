@@ -27,6 +27,7 @@
     "@chromex/core": "^0.0.1",
     "@chromex/reloader": "^0.0.1",
     "@chromex/cli": "^0.0.1",
+    "@chromex/sync-store": "^0.0.1",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "babel-plugin-lodash": "^3.3.4",

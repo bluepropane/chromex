@@ -13,7 +13,8 @@
     "newtab": "newtab.html"
   },
   "permissions": [
-    "tabs"
+    "storage",
+    "activeTab"
   ],
   "version": "0.0.1",
   "manifest_version": 2,

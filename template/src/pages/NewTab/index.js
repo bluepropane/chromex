@@ -1,6 +1,7 @@
 import './index.css';
 import { render, h, Component } from 'preact';
 import chromexLogo from 'assets/icon.png';
+import SyncStore from '@chromex/sync-store';
 
 class App extends Component {
   render() {
@@ -18,3 +19,5 @@ class App extends Component {
 render(<App />, document.getElementById('root'));
 
 console.log('hello world!');
+
+window.SyncStore = SyncStore;

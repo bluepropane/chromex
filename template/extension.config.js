@@ -32,7 +32,7 @@ module.exports = {
       '48': 'icons/icon48.png',
       '128': 'icons/icon128.png',
     },
-    permissions: ['tabs'],
+    permissions: ['storage', 'activeTab'],
     content_security_policy: `script-src 'self' ${
       global.__DEV__ ? "'unsafe-eval'" : ''
     } https://www.googletagmanager.com  https://www.google-analytics.com; object-src 'self'`,
