@@ -11,10 +11,17 @@ module.exports = {
   outputDir: 'ext',
   pages: {
     popup: {
-      title: '$(PROJECT_NAME)',
       entrypoint: './pages/Popup/index.js',
       htmlFilename: 'popup.html',
     },
+    newtab_override: {
+      title: "$(PROJECT_NAME)'s New Tab",
+      entrypoint: './pages/NewTab/index.js',
+      htmlFilename: 'newtab.html',
+    },
+    // bg: {
+    //   entrypoint: './pages/Bg/index.js',
+    // },
   },
   name: '$(PROJECT_NAME)',
   manifest: {

@@ -6,13 +6,11 @@
       "19": "icons/icon19.png",
       "48": "icons/icon48.png"
     },
-    "default_title": "$(PROJECT_NAME)",
+    "default_title": "Popup Page",
     "default_popup": "popup.html"
   },
-  "background": {
-    "scripts": [
-      "reloader.js"
-    ]
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
   },
   "permissions": [
     "tabs"

@@ -9,10 +9,12 @@ class App extends Component {
         <div>
           <img src={chromexLogo} />
         </div>
-        <h1 style={{ fontWeight: 300 }}>$(PROJECT_NAME)'s Popup Page</h1>
+        <h1 style={{ fontWeight: 300 }}>$(PROJECT_NAME)'s New Tab Page</h1>
       </div>
     );
   }
 }
 
 render(<App />, document.getElementById('root'));
+
+console.log('hello world!');
