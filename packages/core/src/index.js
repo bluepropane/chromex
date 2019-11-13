@@ -4,10 +4,13 @@ const { PAGE_TYPES } = require('../constants');
 const path = require('path');
 const merge = require('lodash.merge');
 const ChromexReloaderPlugin = require('@chromex/reloader');
+const CreateFileWebpack = require('create-file-webpack');
 const copyTemplate = require('./copyTemplate');
 const { capitalize } = require('./utils');
 
-async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
+global.__DEV__ = process.env.NODE_ENV === 'development';
+
+async function injectWebpackPlugins({ HtmlWebpackPlugin }) {
   const ext = await resolveExtConfig();
   const plugins = Object.entries(ext.pages)
     .flatMap(([pageType, pageConf]) => {
@@ -34,6 +37,20 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin, JSOutputFilePlugin }) {
     .filter(plugins => !!plugins);
 
   // Plugin for generating manifest file
+  plugins.push(
+    new CreateFileWebpack({
+      path: ext.outputDir,
+      fileName: 'manifest.json',
+      content: JSON.stringify(
+        {
+          ...(await configureManifest()),
+          ...ext.manifest,
+        },
+        null,
+        2
+      ),
+    })
+  );
 
   console.log('chromex configured plugins:', plugins);
   return plugins;

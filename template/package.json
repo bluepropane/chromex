@@ -11,7 +11,7 @@
     "chrome"
   ],
   "scripts": {
-    "dev": "webpack --mode=development --watch",
+    "dev": "NODE_ENV=development webpack --mode=development --watch",
     "build": "webpack --mode=production",
     "commit": "git-cz",
     "release": "standard-version",

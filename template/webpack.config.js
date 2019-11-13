@@ -3,7 +3,6 @@ const path = require('path');
 const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const JSOutputFilePlugin = require('js-output-file-webpack-plugin');
 const GoogleFontsPlugin = require('@beyonk/google-fonts-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WebpackShellPlugin = require('webpack-shell-plugin');
@@ -75,12 +74,8 @@ const configBuilder = async () => {
       new CleanWebpackPlugin({
         cleanStaleWebpackAssets: false,
       }),
-      new JSOutputFilePlugin({
-        sourceFile: 'manifest.json.js',
-      }),
       ...(await chromex.injectWebpackPlugins({
         HtmlWebpackPlugin,
-        JSOutputFilePlugin,
       })),
       // new GoogleFontsPlugin({
       //   fonts: [
