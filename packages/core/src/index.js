@@ -16,14 +16,25 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin }) {
     .flatMap(([pageType, pageConf]) => {
       switch (pageType) {
         case PAGE_TYPES.POPUP:
-          const chunks = [pageType, 'reloader'].concat(pageConf.scripts || []);
           return new HtmlWebpackPlugin({
             template: 'pages/Popup/index.html',
-            filename: `popup.html`,
-            chunks,
+            filename: pageConf.htmlFilename,
+            chunks: [pageType].concat(pageConf.scripts || []),
             hash: true,
             templateParameters: {
               title: pageConf.title || 'Popup Page',
+              faviconPath: '',
+              ...pageConf.templateParameters,
+            },
+          });
+        case PAGE_TYPES.NEWTAB_OVERRIDE:
+          return new HtmlWebpackPlugin({
+            template: 'pages/NewTab/index.html',
+            filename: pageConf.htmlFilename,
+            chunks: [pageType, 'reloader'].concat(pageConf.scripts || []),
+            hash: true,
+            templateParameters: {
+              title: pageConf.title || 'New Tab',
               faviconPath: '',
               ...pageConf.templateParameters,
             },
@@ -103,9 +114,6 @@ async function configureManifest() {
           };
         case PAGE_TYPES.RELOADER:
           return {
-            background: {
-              scripts: ['reloader.js'],
-            },
             permissions: ['management', 'tabs'],
           };
         case PAGE_TYPES.OPTIONS:

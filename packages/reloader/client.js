@@ -1,3 +1,5 @@
+const RECONNECTION_TIMEOUT_MS = 5000;
+
 function getBrowserContext() {
   if (typeof window !== 'undefined') {
     return window;
@@ -76,14 +78,14 @@ const log = ['log', 'error', 'warn'].reduce(
       }
     };
 
-    socket.onerror = function(err) {
-      log.error('Error connecting to server:', err);
-    };
+    // socket.onerror = function(err) {
+    //   log.error('Error connecting to server:', err);
+    // };
 
     socket.onclose = function() {
       removeAllListeners(socket);
       socket = undefined;
-      connect();
+      setTimeout(connect, RECONNECTION_TIMEOUT_MS);
     };
   }
   connect();
