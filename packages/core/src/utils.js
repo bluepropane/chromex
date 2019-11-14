@@ -1,9 +1,19 @@
 const path = require('path');
 
+/**
+ *
+ * @param {string} string
+ */
 function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+/**
+ *
+ * @param {String} pathToImg
+ * @param {number[]} dimensions
+ * @param {Object} options
+ */
 function dimensionedIconNames(pathToImg, dimensions, options) {
   const regex = /(\.[\w]+)$/;
   const pathDir = path.dirname(pathToImg);
@@ -24,7 +34,16 @@ function dimensionedIconNames(pathToImg, dimensions, options) {
   );
 }
 
+/**
+ *
+ * @param {String} pageType
+ */
+function getPageDir(pageType) {
+  return path.join('pages', pageType);
+}
+
 module.exports = {
   capitalize,
   dimensionedIconNames,
+  getPageDir,
 };

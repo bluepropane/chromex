@@ -11,6 +11,7 @@ function normalizePageConf(pageConfs) {
     ([pageType, pageConf]) => {
       const defaultConf = {
         templateParameters: {},
+        bundles: [],
       };
 
       switch (pageType) {
@@ -31,7 +32,9 @@ function normalizePageConf(pageConfs) {
     }
   );
 
-  normalizedPageConfs.push({ [PAGE_TYPES.RELOADER]: true });
+  if (__DEV__) {
+    normalizedPageConfs.push({ [PAGE_TYPES.RELOADER]: true });
+  }
 
   return merge({}, ...normalizedPageConfs);
 }

@@ -16,6 +16,7 @@ module.exports = {
     window: 'readonly',
     document: 'readonly',
     DOMParser: 'readonly',
+    __DEV__: 'readonly'
     page: true,
     browser: true,
     context: true,

@@ -11,18 +11,11 @@ module.exports = {
   outputDir: 'ext',
   extIcon: 'assets/icon.png',
   pages: {
-    popup: {
-      entrypoint: './pages/Popup/index.js',
-      htmlFilename: 'popup.html',
-    },
+    popup: {},
     newtab_override: {
       title: "$(PROJECT_NAME)'s New Tab",
-      entrypoint: './pages/NewTab/index.js',
-      htmlFilename: 'newtab.html',
     },
-    // bg: {
-    //   entrypoint: './pages/Bg/index.js',
-    // },
+    bg: {},
   },
   name: '$(PROJECT_NAME)',
   manifest: {
@@ -30,7 +23,7 @@ module.exports = {
     manifest_version: 2,
     permissions: ['storage', 'activeTab'],
     content_security_policy: `script-src 'self' ${
-      global.__DEV__ ? "'unsafe-eval'" : ''
-    } https://www.googletagmanager.com  https://www.google-analytics.com; object-src 'self'`,
+      global.__DEV__ ? "'unsafe-eval'" : '' // unsafe-eval CSP is required in dev mode since webpack uses eval sourcemaps
+    }; object-src 'self'`,
   },
 };

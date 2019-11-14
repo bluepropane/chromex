@@ -42,7 +42,7 @@ const log = ['log', 'error', 'warn'].reduce(
     });
   }
 
-  async function reloadExtension() {
+  async function reloadPage() {
     log.log('Reloading extension');
     // if (extInfo.installType === 'development' && extInfo.enabled === true) {
     //   await new Promise(res =>
@@ -74,7 +74,7 @@ const log = ['log', 'error', 'warn'].reduce(
       log.log('Message from server ', msg);
       switch (msg.type) {
         case 'RELOAD':
-          reloadExtension();
+          reloadPage();
       }
     };
 

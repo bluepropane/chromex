@@ -86,21 +86,30 @@ const configBuilder = async () => {
         chromex.generateIcons(path.join(ext.srcDir, ext.extIcon), outputDir);
       }),
     ],
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/](preact)[\\/]/,
+            name: 'vendor',
+            chunks: 'all',
+          },
+        },
+      },
+    },
   };
 
   if (!__DEV__) {
-    mainConfig.optimization = {
-      minimizer: [
-        new TerserPlugin({
-          sourceMap: true, // Must be set to true if using source-maps in production
-          terserOptions: {
-            compress: {
-              drop_console: true,
-            },
+    mainConfig.optimization.minimizer = [
+      new TerserPlugin({
+        // sourceMap: true, // Must be set to true if using source-maps in production
+        terserOptions: {
+          compress: {
+            drop_console: true,
           },
-        }),
-      ],
-    };
+        },
+      }),
+    ];
     mainConfig.plugins.push(new webpack.HashedModuleIdsPlugin());
   }
   return mainConfig;

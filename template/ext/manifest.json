@@ -12,10 +12,16 @@
       "128": "icon_128.png"
     },
     "default_title": "Popup Page",
-    "default_popup": "popup.html"
+    "default_popup": "pages/popup/index.html"
   },
   "chrome_url_overrides": {
-    "newtab": "newtab.html"
+    "newtab": "newtab_override.html"
+  },
+  "background": {
+    "scripts": [
+      "bg.js"
+    ],
+    "persistent": false
   },
   "permissions": [
     "storage",
@@ -23,5 +29,5 @@
   ],
   "version": "0.0.1",
   "manifest_version": 2,
-  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.googletagmanager.com  https://www.google-analytics.com; object-src 'self'"
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
