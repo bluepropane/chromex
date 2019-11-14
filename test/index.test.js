@@ -1,4 +1,4 @@
-import main from '../dist/';
+import main from '../src/';
 const fs = require('fs');
 const TEST_OUTPUT_DIR = './test-out';
 
@@ -12,6 +12,6 @@ describe('', () => {
   });
 
   afterAll(() => {
-    fs.rmdir(TEST_OUTPUT_DIR, { recursive: true });
+    fs.rmdirSync(TEST_OUTPUT_DIR, { recursive: true });
   });
 });

@@ -81,12 +81,12 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "5ylo");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./pages/Popup/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "4dxh":
+/***/ "../node_modules/preact/dist/preact.mjs":
 /*!**********************************************!*\
   !*** ../node_modules/preact/dist/preact.mjs ***!
   \**********************************************/
@@ -98,19 +98,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
-/***/ "5ylo":
-/*!******************************!*\
-  !*** ./pages/Popup/index.js ***!
-  \******************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"oHPx\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var preact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! preact */ \"4dxh\");\n/* harmony import */ var _assets_icon_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/icon.png */ \"eDXL\");\n/* harmony import */ var _assets_icon_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_icon_png__WEBPACK_IMPORTED_MODULE_2__);\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\n\n\nvar App =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(App, _Component);\n\n  function App() {\n    _classCallCheck(this, App);\n\n    return _possibleConstructorReturn(this, _getPrototypeOf(App).apply(this, arguments));\n  }\n\n  _createClass(App, [{\n    key: \"render\",\n    value: function render() {\n      return Object(preact__WEBPACK_IMPORTED_MODULE_1__[\"h\"])(\"div\", {\n        className: \"App\"\n      }, Object(preact__WEBPACK_IMPORTED_MODULE_1__[\"h\"])(\"div\", null, Object(preact__WEBPACK_IMPORTED_MODULE_1__[\"h\"])(\"img\", {\n        src: _assets_icon_png__WEBPACK_IMPORTED_MODULE_2___default.a\n      })), Object(preact__WEBPACK_IMPORTED_MODULE_1__[\"h\"])(\"h1\", {\n        style: {\n          fontWeight: 300\n        }\n      }, \"$(PROJECT_NAME)'s Popup Page\"));\n    }\n  }]);\n\n  return App;\n}(preact__WEBPACK_IMPORTED_MODULE_1__[\"Component\"]);\n\nObject(preact__WEBPACK_IMPORTED_MODULE_1__[\"render\"])(Object(preact__WEBPACK_IMPORTED_MODULE_1__[\"h\"])(App, null), document.getElementById('root'));\n\n//# sourceURL=webpack:///./pages/Popup/index.js?");
-
-/***/ }),
-
-/***/ "eDXL":
+/***/ "./assets/icon.png":
 /*!*************************!*\
   !*** ./assets/icon.png ***!
   \*************************/
@@ -121,7 +109,7 @@ eval("module.exports = __webpack_require__.p + \"6739ca0a664faecf2db6a82afdeedcf
 
 /***/ }),
 
-/***/ "oHPx":
+/***/ "./pages/Popup/index.css":
 /*!*******************************!*\
   !*** ./pages/Popup/index.css ***!
   \*******************************/
@@ -129,6 +117,18 @@ eval("module.exports = __webpack_require__.p + \"6739ca0a664faecf2db6a82afdeedcf
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n    if(false) { var cssReload; }\n  \n\n//# sourceURL=webpack:///./pages/Popup/index.css?");
+
+/***/ }),
+
+/***/ "./pages/Popup/index.js":
+/*!******************************!*\
+  !*** ./pages/Popup/index.js ***!
+  \******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./pages/Popup/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var preact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! preact */ \"../node_modules/preact/dist/preact.mjs\");\n/* harmony import */ var _assets_icon_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/icon.png */ \"./assets/icon.png\");\n/* harmony import */ var _assets_icon_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_icon_png__WEBPACK_IMPORTED_MODULE_2__);\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\n\n\nvar App =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(App, _Component);\n\n  function App() {\n    _classCallCheck(this, App);\n\n    return _possibleConstructorReturn(this, _getPrototypeOf(App).apply(this, arguments));\n  }\n\n  _createClass(App, [{\n    key: \"render\",\n    value: function render() {\n      return Object(preact__WEBPACK_IMPORTED_MODULE_1__[\"h\"])(\"div\", {\n        className: \"App\"\n      }, Object(preact__WEBPACK_IMPORTED_MODULE_1__[\"h\"])(\"div\", null, Object(preact__WEBPACK_IMPORTED_MODULE_1__[\"h\"])(\"img\", {\n        src: _assets_icon_png__WEBPACK_IMPORTED_MODULE_2___default.a\n      })), Object(preact__WEBPACK_IMPORTED_MODULE_1__[\"h\"])(\"h1\", {\n        style: {\n          fontWeight: 300\n        }\n      }, \"$(PROJECT_NAME)'s Popup Page\"));\n    }\n  }]);\n\n  return App;\n}(preact__WEBPACK_IMPORTED_MODULE_1__[\"Component\"]);\n\nObject(preact__WEBPACK_IMPORTED_MODULE_1__[\"render\"])(Object(preact__WEBPACK_IMPORTED_MODULE_1__[\"h\"])(App, null), document.getElementById('root'));\n\n//# sourceURL=webpack:///./pages/Popup/index.js?");
 
 /***/ })
 

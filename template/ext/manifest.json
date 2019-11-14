@@ -1,10 +1,15 @@
 {
   "name": "$(PROJECT_NAME)",
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
   "browser_action": {
     "default_icon": {
-      "16": "icons/icon16.png",
-      "19": "icons/icon19.png",
-      "48": "icons/icon48.png"
+      "16": "icon_16.png",
+      "48": "icon_48.png",
+      "128": "icon_128.png"
     },
     "default_title": "Popup Page",
     "default_popup": "popup.html"
@@ -18,10 +23,5 @@
   ],
   "version": "0.0.1",
   "manifest_version": 2,
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.googletagmanager.com  https://www.google-analytics.com; object-src 'self'"
 }

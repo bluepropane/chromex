@@ -16,7 +16,7 @@
     "build": "rollup -c rollup.config.js",
     "commit": "git-cz",
     "release": "standard-version",
-    "test": "jest",
+    "test": "jest test/",
     "testflow": ". integrationTest.sh",
     "setup": "lerna bootstrap --include-filtered-dependencies --force-local"
   },

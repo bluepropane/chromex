@@ -77,36 +77,14 @@ const configBuilder = async () => {
       ...(await chromex.injectWebpackPlugins({
         HtmlWebpackPlugin,
       })),
-      // new GoogleFontsPlugin({
-      //   fonts: [
-      //     {
-      //       family: 'Chau Philomene One',
-      //       variants: ['400'],
-      //       subsets: ['latin'],
-      //     },
-      //     { family: 'Open Sans', variants: ['400'], subsets: ['latin'] },
-      //   ],
-      // }),
       new MiniCssExtractPlugin({
         filename: '[name].css',
         chunkFilename: '[id].css',
       }),
       new PostCompile(async () => {
-        console.log('Generating icons for required dimensions...');
-        await fs.promises.mkdir(path.join(outputDir, 'icons')).catch(err => {
-          // EEXIST: Thrown when re-bundling is triggered and `icons` dir already exists. We don't care about this, so just proceed
-          console.debug('[Post Compile]', err);
-        });
-        chromex.generateIcons(
-          `${ext.srcDir}/assets/icon.png`,
-          `${outputDir}/icons`
-        );
-        fs.promises.copyFile(
-          path.join(__dirname, ext.srcDir, 'assets', 'icon.png'),
-          path.join(outputDir, 'favicon.ico')
-        );
+        console.log('[Post Compile] Generating icons for required dimensions');
+        chromex.generateIcons(path.join(ext.srcDir, ext.extIcon), outputDir);
       }),
-      new webpack.HashedModuleIdsPlugin(),
     ],
   };
 
@@ -123,6 +101,7 @@ const configBuilder = async () => {
         }),
       ],
     };
+    mainConfig.plugins.push(new webpack.HashedModuleIdsPlugin());
   }
   return mainConfig;
 };

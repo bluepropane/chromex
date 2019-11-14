@@ -1,12 +1,12 @@
 const resolveExtConfig = require('./resolveExtConfig');
 const generateIcons = require('./generateIcons');
-const { PAGE_TYPES } = require('../constants');
+const { PAGE_TYPES, ICON_OUTPUT_SIZES } = require('../constants');
 const path = require('path');
 const merge = require('lodash.merge');
 const ChromexReloaderPlugin = require('@chromex/reloader');
 const CreateFileWebpack = require('create-file-webpack');
 const copyTemplate = require('./copyTemplate');
-const { capitalize } = require('./utils');
+const { capitalize, dimensionedIconNames } = require('./utils');
 
 global.__DEV__ = process.env.NODE_ENV === 'development';
 
@@ -73,7 +73,9 @@ async function injectWebpackEntrypoints() {
     switch (pageType) {
       case PAGE_TYPES.RELOADER:
         return {
-          reloader: './lib/reloader-proxy.js',
+          reloader: require.resolve('@chromex/reloader/client', {
+            path: ext.projectRoot,
+          }),
         };
       default:
         return {
@@ -89,18 +91,16 @@ async function injectWebpackEntrypoints() {
 
 async function configureManifest() {
   const ext = await resolveExtConfig();
-
+  const icons = dimensionedIconNames(ext.extIcon, ICON_OUTPUT_SIZES, {
+    fileExt: '.png',
+  });
   const manifestDiffs = Object.entries(ext.pages).map(
     ([pageType, pageConf]) => {
       switch (pageType) {
         case PAGE_TYPES.POPUP:
           return {
             browser_action: {
-              default_icon: {
-                '16': 'icons/icon16.png',
-                '19': 'icons/icon19.png',
-                '48': 'icons/icon48.png',
-              },
+              default_icon: icons,
               default_title: pageConf.title,
               default_popup: pageConf.htmlFilename,
             },
@@ -135,6 +135,7 @@ async function configureManifest() {
   const manifest = merge(
     {
       name: ext.name,
+      icons,
     },
     ...manifestDiffs
   );

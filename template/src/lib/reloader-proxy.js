@@ -1,1 +1,0 @@
-import '@chromex/reloader/client';

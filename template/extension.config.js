@@ -9,6 +9,7 @@ const pkg = require('./package.json');
 module.exports = {
   srcDir: 'src',
   outputDir: 'ext',
+  extIcon: 'assets/icon.png',
   pages: {
     popup: {
       entrypoint: './pages/Popup/index.js',
@@ -27,11 +28,6 @@ module.exports = {
   manifest: {
     version: pkg.version,
     manifest_version: 2,
-    icons: {
-      '16': 'icons/icon16.png',
-      '48': 'icons/icon48.png',
-      '128': 'icons/icon128.png',
-    },
     permissions: ['storage', 'activeTab'],
     content_security_policy: `script-src 'self' ${
       global.__DEV__ ? "'unsafe-eval'" : ''

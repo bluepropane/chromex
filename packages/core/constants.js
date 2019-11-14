@@ -6,4 +6,5 @@ module.exports = {
     OPTIONS: 'options',
     NEWTAB_OVERRIDE: 'newtab_override',
   },
+  ICON_OUTPUT_SIZES: [16, 48, 128],
 };

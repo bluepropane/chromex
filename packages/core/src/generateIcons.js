@@ -1,20 +1,23 @@
+/**
+ * https://developer.chrome.com/extensions/manifest/icons
+ */
+const path = require('path');
 const sharp = require('sharp');
-
-const OUTPUT_SIZES = [16, 19, 48, 128];
+const { ICON_OUTPUT_SIZES } = require('../constants');
+const { dimensionedIconNames } = require('./utils');
 
 function generateIcons(pathToFile, outputDir) {
   const inputImg = sharp(pathToFile);
-  const imgName = pathToFile
-    .split('/')
-    .slice(-1)[0]
-    .replace(/(\.[\w]+)$/, '');
-
-  OUTPUT_SIZES.forEach(imgSize => {
+  const iconOutputs = dimensionedIconNames(pathToFile, ICON_OUTPUT_SIZES, {
+    fileExt: '.png',
+  });
+  Object.entries(iconOutputs).forEach(([imgSize, iconOutput], idx) => {
+    imgSize = parseInt(imgSize);
     const outputImg = inputImg.clone();
     outputImg
       .resize(imgSize, imgSize)
       .png()
-      .toFile(`${outputDir}/${imgName}${imgSize}.png`);
+      .toFile(path.join(outputDir, iconOutput));
   });
 }
 
