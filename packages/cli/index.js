@@ -24,7 +24,7 @@ program.command('add [pageType]').action(async pageType => {
     return;
   }
 
-  const pagesDir = path.join(extConfig.projectRoot, 'src/pages');
+  const pagesDir = path.join(extConfig.projectRoot, 'src', 'pages');
   const targetDir = path.join(pagesDir, pageType);
 
   if (fs.existsSync(targetDir)) {
@@ -45,7 +45,7 @@ program.command('remove <pageType>').action(async pageType => {
     return;
   }
 
-  const pagesDir = path.join(extConfig.projectRoot, 'src/pages');
+  const pagesDir = path.join(extConfig.projectRoot, 'src', 'pages');
   const targetDir = path.join(pagesDir, pageType);
 
   if (fs.existsSync(targetDir)) {

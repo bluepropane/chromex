@@ -11,14 +11,19 @@
     "chrome",
     "boilerplate"
   ],
+  "files": [
+    "template/**/*",
+    "index.js"
+  ],
   "scripts": {
     "dev": "yarn build -w",
     "build": "rollup -c rollup.config.js",
+    "prepare": "yarn build",
     "commit": "git-cz",
     "release": "standard-version",
     "test": "jest test/",
     "testflow": ". integrationTest.sh",
-    "setup": "lerna bootstrap --include-filtered-dependencies --force-local"
+    "setup": "lerna bootstrap --include-dependencies --force-local"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",

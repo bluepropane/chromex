@@ -41,7 +41,7 @@ class ChromexReloaderPlugin {
   log(compilation, ...args) {
     let logger = compilation.getLogger
       ? compilation.getLogger('ChromexReloaderPlugin')
-      : console.log;
+      : console.log.bind(null, '[ChromexReloaderPlugin]');
 
     if (typeof logger !== 'function') logger = console.log;
 

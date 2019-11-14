@@ -42,21 +42,14 @@ const log = ['log', 'error', 'warn'].reduce(
     });
   }
 
-  async function reloadPage() {
-    log.log('Reloading extension');
-    // if (extInfo.installType === 'development' && extInfo.enabled === true) {
-    //   await new Promise(res =>
-    //     chrome.management.setEnabled(extInfo.id, false, res)
-    //   );
-    //   await new Promise(res =>
-    //     chrome.management.setEnabled(extInfo.id, true, res)
-    //   );
-    // }
-
-    // await new Promise(res => {
-    //   chrome.tabs.reload(currentTab.id, {}, res);
-    // });
+  function reloadPage() {
+    log.log('Reloading page');
     window.location.reload();
+  }
+
+  function reloadExtension() {
+    log.log('Reloading extension');
+    chrome.runtime.reload();
   }
 
   function connect() {
@@ -77,10 +70,6 @@ const log = ['log', 'error', 'warn'].reduce(
           reloadPage();
       }
     };
-
-    // socket.onerror = function(err) {
-    //   log.error('Error connecting to server:', err);
-    // };
 
     socket.onclose = function() {
       removeAllListeners(socket);
