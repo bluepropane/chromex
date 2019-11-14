@@ -1,12 +1,12 @@
 {
   "name": "@chromex/cli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "bin": {
     "chromex": "index.js"
   },
   "license": "MIT",
   "dependencies": {
-    "@chromex/core": "^0.0.1",
+    "@chromex/core": "^0.1.0",
     "commander": "^3.0.2",
     "inquirer": "^7.0.0"
   }

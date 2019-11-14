@@ -1,6 +1,6 @@
 {
   "name": "create-chrome-extension",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Chrome extensions in a minute",
   "main": "dist/index.js",
   "repository": "https://github.io",
@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.6.3",
-    "@chromex/core": "^0.0.1",
+    "@chromex/core": "^0.1.0",
     "puppeteer": "^1.20.0"
   }
 }

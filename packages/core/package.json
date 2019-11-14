@@ -1,6 +1,6 @@
 {
   "name": "@chromex/core",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "src/index.js",
   "module": "src/index.js",
   "files": [
@@ -13,7 +13,7 @@
     "prepublish": "yarn build"
   },
   "dependencies": {
-    "@chromex/reloader": "^0.0.1",
+    "@chromex/reloader": "^0.1.0",
     "commander": "^3.0.2",
     "find-up": "^4.1.0",
     "lodash.merge": "^4.6.2",
