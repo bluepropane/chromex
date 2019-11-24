@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/core@0.1.1...@chromex/core@0.1.2) (2019-11-24)
+
+
+### Bug Fixes
+
+* **@chromex/core:** move pkg from devDep to dep due to missing dependency ([07e95bf](https://github.com/bluepropane/create-chrome-extension/commit/07e95bfe169b2509734969e682ece9783adf85a4))
+
+
+
+
+
 ## [0.1.1](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/core@0.1.0...@chromex/core@0.1.1) (2019-11-24)
 
 

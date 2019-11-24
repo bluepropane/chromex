@@ -1,6 +1,6 @@
 {
   "name": "@chromex/core",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "src/index.js",
   "module": "src/index.js",
   "files": [
@@ -14,13 +14,13 @@
   "dependencies": {
     "@chromex/reloader": "^0.0.5",
     "commander": "^3.0.2",
+    "create-file-webpack": "^1.0.2",
     "find-up": "^4.1.0",
     "lodash.merge": "^4.6.2",
     "ncp": "^2.0.0",
     "p-limit": "^2.2.1",
     "sharp": "^0.23.1",
-    "ws": "^7.2.0",
-    "create-file-webpack": "^1.0.2"
+    "ws": "^7.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
