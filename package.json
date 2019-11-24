@@ -22,6 +22,7 @@
   ],
   "scripts": {
     "release": ". scripts/release.sh",
+    "publish": ". scripts/publish.sh",
     "setup": "lerna bootstrap --include-dependencies --force-local",
     "commit": "git-cz"
   },
