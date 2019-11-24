@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/core@0.1.2...@chromex/core@0.1.3) (2019-11-24)
+
+
+### Bug Fixes
+
+* **@chromex/core:** remove file scoping ([9fe4c73](https://github.com/bluepropane/create-chrome-extension/commit/9fe4c7345bd1e4a4ba520b2f569d3d34ac79f65e))
+
+
+
+
+
 ## [0.1.2](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/core@0.1.1...@chromex/core@0.1.2) (2019-11-24)
 
 
