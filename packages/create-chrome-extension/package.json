@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "create-chrome-extension",
   "version": "0.1.0",
   "description": "Create chrome extensions in a minute",
