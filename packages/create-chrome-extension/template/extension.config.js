@@ -5,7 +5,7 @@ module.exports = {
   outputDir: 'ext',
   extIcon: 'assets/icon.png',
   liveReload: true,
-  pages: { popup: {} },
+  pages: { popup: {}, options: {} },
 
   name: '$(PROJECT_NAME)',
   manifest: {

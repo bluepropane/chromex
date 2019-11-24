@@ -39,6 +39,21 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin }) {
               ...pageConf.templateParameters,
             },
           });
+        case PAGE_TYPES.OPTIONS:
+          return new HtmlWebpackPlugin({
+            template: path.join(pageDir, 'index.html'),
+            filename: `${pageType}.html`,
+            chunks: [pageType, 'vendor'].concat(
+              pageConf.bundles,
+              __DEV__ ? ['reloader'] : []
+            ),
+            hash: true,
+            templateParameters: {
+              title: "Configure options | $(PROJECT_NAME)'",
+              faviconPath: '',
+              ...pageConf.templateParameters,
+            },
+          });
         case PAGE_TYPES.RELOADER:
           return new ChromexReloaderPlugin();
         default:

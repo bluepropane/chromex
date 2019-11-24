@@ -22,7 +22,8 @@
   ],
   "scripts": {
     "release": ". scripts/release.sh",
-    "setup": "lerna bootstrap --include-dependencies --force-local"
+    "setup": "lerna bootstrap --include-dependencies --force-local",
+    "commit": "git-cz"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
@@ -33,5 +34,10 @@
   },
   "dependencies": {
     "create-chrome-extension": "^0.1.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
