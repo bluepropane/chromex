@@ -1,6 +1,6 @@
 {
   "name": "@chromex/sync-store",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Synchronized key-value store across all pages of a chrome extension.",
   "main": "index.js",
   "keywords": [
