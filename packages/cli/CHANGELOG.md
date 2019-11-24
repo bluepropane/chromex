@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/cli@0.1.0...@chromex/cli@0.2.0) (2019-11-24)
+
+
+### Features
+
+* Port CCE's cli to @chromex/cli ([0275843](https://github.com/bluepropane/create-chrome-extension/commit/027584397d26c44e3cf9c0ddeb2c9e8a98ce5112))
+
+
+
+
+
 # [0.1.0](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/cli@0.0.6...@chromex/cli@0.1.0) (2019-11-24)
 
 
