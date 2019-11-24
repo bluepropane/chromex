@@ -3,9 +3,6 @@
   "version": "0.1.2",
   "main": "src/index.js",
   "module": "src/index.js",
-  "files": [
-    "src/*"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "rollup -c rollup.config.js",
