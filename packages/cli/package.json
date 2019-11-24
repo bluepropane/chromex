@@ -12,7 +12,7 @@
   "dependencies": {
     "@babel/types": "^7.7.2",
     "@chromex/core": "^0.1.0",
-    "@chromex/utils": "^0.0.1",
+    "@chromex/utils": "^0.0.7",
     "commander": "^3.0.2",
     "del": "^5.1.0",
     "inquirer": "^7.0.0"
