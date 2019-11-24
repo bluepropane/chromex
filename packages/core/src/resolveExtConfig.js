@@ -1,7 +1,7 @@
 const findUp = require('find-up');
 const path = require('path');
 const fs = require('fs');
-const { PAGE_TYPES } = require('../constants');
+const { PAGE_TYPES } = require('./constants');
 const merge = require('lodash.merge');
 
 let cachedConfig = null;

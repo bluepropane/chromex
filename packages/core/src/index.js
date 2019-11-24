@@ -3,7 +3,7 @@ global.__DEV__ = process.env.NODE_ENV === 'development';
 
 const resolveExtConfig = require('./resolveExtConfig');
 const generateIcons = require('./generateIcons');
-const { PAGE_TYPES, ICON_OUTPUT_SIZES } = require('../constants');
+const { PAGE_TYPES, ICON_OUTPUT_SIZES } = require('./constants');
 const path = require('path');
 const merge = require('lodash.merge');
 const ChromexReloaderPlugin = require('@chromex/reloader');

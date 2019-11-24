@@ -3,7 +3,7 @@
  */
 const path = require('path');
 const sharp = require('sharp');
-const { ICON_OUTPUT_SIZES } = require('../constants');
+const { ICON_OUTPUT_SIZES } = require('./constants');
 const { dimensionedIconNames } = require('./utils');
 
 function generateIcons(pathToFile, outputDir) {
