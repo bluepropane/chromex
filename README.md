@@ -31,9 +31,9 @@
 - [Prerequisites](#prerequisites)
 - [Quickstart](#quickstart)
 - [Documentation](#documentation)
-      - [1. Tutorial Overview](#1-tutorial-overview)
-      - [2. Customizing Extension Pages](#2-customizing-extension-pages)
-      - [3. Publishing your extension](#3-publishing-your-extension)
+    - [1. Tutorial Overview](#1-tutorial-overview)
+    - [2. Customizing Extension Pages](#2-customizing-extension-pages)
+    - [3. Publishing your extension](#3-publishing-your-extension)
 - [Roadmap](#roadmap)
 - [Contact](#contact)
 - [Contributing](#contributing)
@@ -103,11 +103,11 @@ In this demo, we will create a simple extension with a browser action popup.
 
 ## Documentation
 
-##### [1. Tutorial Overview](https://github.com/bluepropane/create-chrome-extension/blob/master/docs/1-Overview.md)
+#### [1. Tutorial Overview](https://github.com/bluepropane/create-chrome-extension/blob/master/docs/1-Overview.md)
 
-##### [2. Customizing Extension Pages](docs/2-Extension-Pages.md)
+#### [2. Customizing Extension Pages](docs/2-Extension-Pages.md)
 
-##### [3. Publishing your extension](docs/3-Publishing.md)
+#### [3. Publishing your extension](docs/3-Publishing.md)
 
 
 <!-- ROADMAP -->
