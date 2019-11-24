@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/cli@0.2.5...@chromex/cli@0.2.6) (2019-11-24)
+
+
+### Bug Fixes
+
+* **@chromex/cli:** fix missing dep issue due to it being in devDeps ([70235c4](https://github.com/bluepropane/create-chrome-extension/commit/70235c47f313be5b4ee8c1f911cd8d335fe800b7))
+
+
+
+
+
 ## [0.2.5](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/cli@0.2.4...@chromex/cli@0.2.5) (2019-11-24)
 
 **Note:** Version bump only for package @chromex/cli
