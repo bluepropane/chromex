@@ -1,6 +1,4 @@
-output/
-**/ext/
-**/dist/
+ext/
 
 # Logs
 logs

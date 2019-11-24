@@ -1,0 +1,41 @@
+{
+  "name": "create-chrome-extension",
+  "version": "0.0.4",
+  "description": "Create chrome extensions in a minute",
+  "bin": {
+    "create-chrome-extension": "src/index.js"
+  },
+  "repository": "https://github.io/bluepropane",
+  "author": "bluepropane <rbluepropane@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "chrome-extension",
+    "chrome",
+    "boilerplate",
+    "livereload",
+    "extension"
+  ],
+  "files": [
+    "template/**/*",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "jest test/",
+    "testfunc": ". integrationTest.sh"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "jest-puppeteer": "^4.3.0",
+    "prettier": "^1.18.2",
+    "puppeteer": "^1.20.0",
+    "puppeteer-core": "^1.18.1"
+  },
+  "dependencies": {
+    "@chromex/core": "^0.0.1",
+    "@chromex/utils": "^0.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "c0d2f9324dda85e1b5f31e8f8e58998f29f0d2c8"
+}

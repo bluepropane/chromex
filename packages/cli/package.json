@@ -1,0 +1,30 @@
+{
+  "name": "@chromex/cli",
+  "description": "CLI to manage chromex-based extensions.",
+  "version": "0.0.5",
+  "bin": {
+    "chromex": "src/index.js"
+  },
+  "scripts": {
+    "test": "jest test/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/types": "^7.7.2",
+    "@chromex/core": "^0.0.1",
+    "@chromex/utils": "^0.0.1",
+    "commander": "^3.0.2",
+    "del": "^5.1.0",
+    "inquirer": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/generator": "^7.7.2",
+    "@babel/parser": "^7.7.3",
+    "@babel/traverse": "^7.7.2",
+    "jest": "^24.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

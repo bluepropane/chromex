@@ -1,0 +1,1 @@
+lerna publish from-git --yes

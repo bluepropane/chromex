@@ -1,0 +1,14 @@
+{
+  "packages": ["packages/*", "./", "./template"],
+  "version": "independent",
+  "npmClient": "yarn",
+  "command": {
+    "bootstrap": {
+      "npmClientArgs": [
+        "--include-dependencies"
+      ],
+      "unsafePerm": true
+    }
+  },
+  "useWorkspaces": true
+}

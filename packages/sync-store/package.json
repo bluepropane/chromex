@@ -1,0 +1,17 @@
+{
+  "name": "@chromex/sync-store",
+  "version": "0.0.4",
+  "description": "Synchronized key-value store across all pages of a chrome extension.",
+  "main": "index.js",
+  "keywords": [
+    "hot-reload",
+    "live-reload",
+    "chrome-extension"
+  ],
+  "author": "bluepropane <rbluepropane@gmail.com>",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "c0d2f9324dda85e1b5f31e8f8e58998f29f0d2c8"
+}
