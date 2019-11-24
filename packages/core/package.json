@@ -1,6 +1,6 @@
 {
   "name": "@chromex/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "src/index.js",
   "module": "src/index.js",
   "files": [

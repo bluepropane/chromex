@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/core@0.1.0...@chromex/core@0.1.1) (2019-11-24)
+
+
+### Bug Fixes
+
+* **@chromex/core:** unable to find constants file ([4c25e18](https://github.com/bluepropane/create-chrome-extension/commit/4c25e188e9e96966fb6f5f801843e4c95f3d1b00))
+
+
+
+
+
 # [0.1.0](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/core@0.0.8...@chromex/core@0.1.0) (2019-11-24)
 
 
