@@ -1,3 +1,5 @@
+# Customizing Extension Pages
+
 Let's take a look in the `src/pages` directory of your extension. You should see one folder named `popup`. This folder contains code related to the example browser action popup that you have seen earlier.
 
 ## Defining a new extension page
@@ -9,3 +11,9 @@ Your generated extension project comes with a lightweight Chromex CLI that can b
 Or, if you are using yarn:
 
     yarn chromex add newtab_override
+
+Two things happen here:
+1. The page boilerplate is generated in `src/pages/newtab_override`
+2. The `newtab_override` entry is generated in `extension.config.js`'s `pages` property.
+
+If you have your development environment (`npm run dev`) running, try navigating to a new tab in chrome 

@@ -1,3 +1,5 @@
+# Overview
+
 ***NOTE**: Before you proceed, it is recommended that you have some basic knowledge of [chrome extensions and how they are developed](https://developer.chrome.com/extensions). However, it's not a must!*
 
 `create-chrome-extension` takes a very declarative approach to building your extension: Most of the extension-related logic is defined in a configuration file named **`extension.config.js`**.

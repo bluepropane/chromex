@@ -1,3 +1,5 @@
+# Publishing your extension
+
 There are some good articles out there that guide you on publishing your extension for the world to see, e.g.: [How To Publish Your Chrome Extension](https://www.freecodecamp.org/news/how-to-publish-your-chrome-extension-dd8400a3d53/)
 
 In general, some points to note are:
