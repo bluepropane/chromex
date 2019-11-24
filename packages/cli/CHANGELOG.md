@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.7](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/cli@0.2.6...@chromex/cli@0.2.7) (2019-11-24)
+
+
+### Bug Fixes
+
+* **@chromex/cli:** add prettier to deplist ([174e048](https://github.com/bluepropane/create-chrome-extension/commit/174e048e98ca2740c9075d1bc170a37b87ccb7f4))
+
+
+
+
+
 ## [0.2.6](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/cli@0.2.5...@chromex/cli@0.2.6) (2019-11-24)
 
 
