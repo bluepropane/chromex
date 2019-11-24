@@ -7,6 +7,7 @@ const inquirer = require('inquirer');
 const pkg = require('../package.json');
 const ConfigUpdater = require('./ConfigUpdater');
 const PageManager = require('./PageManager');
+const cceProxy = require('./cceProxy');
 
 const ALLOWED_PAGE_TYPES = {
   popup: 'popup',
@@ -90,6 +91,13 @@ program.command('remove <pageType>').action(async pageType => {
     console.log(`${await PageManager.remove(pageType)} removed`);
     configUpdater.commit();
     console.log(`Removed ${pageType} page entry from extension.config.js`);
+  }
+});
+
+program.command('new [extName]').action(async extName => {
+  const success = await cceProxy(extName);
+  if (success) {
+    console.log(`Generated new extension boilerplate in ${extName}`);
   }
 });
 
