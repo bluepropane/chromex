@@ -19,13 +19,13 @@
     "ncp": "^2.0.0",
     "p-limit": "^2.2.1",
     "sharp": "^0.23.1",
-    "ws": "^7.2.0"
+    "ws": "^7.2.0",
+    "create-file-webpack": "^1.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/runtime": "^7.6.3",
-    "create-file-webpack": "^1.0.2",
     "rollup": "^1.26.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
