@@ -1,6 +1,6 @@
 {
   "name": "create-chrome-extension",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Create chrome extensions in a minute",
   "bin": {
     "create-chrome-extension": "src/index.js"
