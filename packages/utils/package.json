@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "find-up": "^4.1.0",
+    "glob": "^7.1.6",
     "lodash.merge": "^4.6.2",
     "ncp": "^2.0.0",
     "p-limit": "^2.2.1"
@@ -17,5 +18,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "c0d2f9324dda85e1b5f31e8f8e58998f29f0d2c8"
+  "gitHead": "e29426f03824cd5cfb102639219acc916819165d"
 }
