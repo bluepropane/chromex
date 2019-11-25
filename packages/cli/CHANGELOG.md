@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/cli@0.2.8...@chromex/cli@0.3.0) (2019-11-25)
+
+
+### Features
+
+* **@chromex/cli:** move boilerplate generator to @chromex/init pkg ([86c522b](https://github.com/bluepropane/create-chrome-extension/commit/86c522b2f2c2b94d79d8f171eb5f81b6435d7569))
+
+
+
+
+
 ## [0.2.8](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/cli@0.2.7...@chromex/cli@0.2.8) (2019-11-24)
 
 **Note:** Version bump only for package @chromex/cli
