@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/reloader@0.0.6...@chromex/reloader@0.0.7) (2019-11-25)
+
+**Note:** Version bump only for package @chromex/reloader
+
+
+
+
+
 ## [0.0.6](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/reloader@0.0.5...@chromex/reloader@0.0.6) (2019-11-25)
 
 **Note:** Version bump only for package @chromex/reloader
