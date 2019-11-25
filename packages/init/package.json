@@ -5,6 +5,9 @@
   "bin": {
     "init": "src/index.js"
   },
+  "files": [
+    "src/*"
+  ],
   "main": "src/index.js",
   "license": "MIT",
   "dependencies": {

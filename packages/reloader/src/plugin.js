@@ -66,7 +66,7 @@ class ChromexReloaderPlugin {
             compilation,
             'Changes detected in',
             changes.map(({ id }) => id),
-            'reloading extension components'
+            '- reloading extension components'
           );
           await this.broadcastReload();
         }
