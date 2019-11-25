@@ -7,7 +7,7 @@
     <img src="docs/assets/logo.png" alt="Logo" width="128" height="128">
   </a>
 
-  <h2 align="center"><code>create-chrome-extension</code></h2>
+  <h2 align="center">Chromex</h2>
 
   <p align="center">
     Fast and easy framework for development of Google Chrome extensions
