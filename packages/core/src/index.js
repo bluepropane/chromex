@@ -1,7 +1,7 @@
 /* global __DEV__ */
 global.__DEV__ = process.env.NODE_ENV === 'development';
 
-const resolveExtConfig = require('./resolveExtConfig');
+const { resolveExtConfig } = require('@chromex/utils');
 const generateIcons = require('./generateIcons');
 const { PAGE_TYPES, ICON_OUTPUT_SIZES } = require('./constants');
 const path = require('path');

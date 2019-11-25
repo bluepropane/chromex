@@ -6,6 +6,8 @@
   "module": "src/index.js",
   "license": "MIT",
   "dependencies": {
+    "find-up": "^4.1.0",
+    "lodash.merge": "^4.6.2",
     "ncp": "^2.0.0",
     "p-limit": "^2.2.1"
   },

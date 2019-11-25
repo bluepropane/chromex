@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@chromex/reloader": "^0.0.5",
+    "@chromex/utils": "^0.0.7",
     "commander": "^3.0.2",
     "create-file-webpack": "^1.0.2",
     "find-up": "^4.1.0",
