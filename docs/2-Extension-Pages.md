@@ -16,4 +16,4 @@ Two things happen here:
 1. The page boilerplate is generated in `src/pages/newtab_override`
 2. The `newtab_override` entry is generated in `extension.config.js`'s `pages` property.
 
-If you have your development environment (`npm run dev`) running, try navigating to a new tab in chrome 
+If you have your development environment (`npm run dev`) running, try navigating to a new tab in chrome. You should see that your default new tab page has been overriden by your very own New Tab page!
