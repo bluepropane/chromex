@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const program = require('commander');
-const chromex = require('@chromex/core');
+const { resolveExtConfig } = require('@chromex/utils');
 const path = require('path');
 const inquirer = require('inquirer');
 const pkg = require('../package.json');
@@ -91,13 +91,6 @@ program.command('remove <pageType>').action(async pageType => {
     console.log(`${await PageManager.remove(pageType)} removed`);
     configUpdater.commit();
     console.log(`Removed ${pageType} page entry from extension.config.js`);
-  }
-});
-
-program.command('new [extName]').action(async extName => {
-  const success = await cceProxy(extName);
-  if (success) {
-    console.log(`Generated new extension boilerplate in ${extName}`);
   }
 });
 

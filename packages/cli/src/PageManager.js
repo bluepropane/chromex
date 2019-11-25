@@ -1,6 +1,5 @@
 const path = require('path');
-const { resolveExtConfig } = require('@chromex/core');
-const { copyTemplate } = require('@chromex/utils');
+const { copyTemplate, resolveExtConfig } = require('@chromex/utils');
 const del = require('del');
 
 async function add(pageType) {
