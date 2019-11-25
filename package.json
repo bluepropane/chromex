@@ -35,7 +35,7 @@
     "prettier": "^1.18.2"
   },
   "dependencies": {
-    "create-chrome-extension": "^0.1.2"
+    "@chromex/init": "0.0.1"
   },
   "config": {
     "commitizen": {
