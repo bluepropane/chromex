@@ -1,6 +1,6 @@
 {
   "name": "@chromex/core",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "src/index.js",
   "module": "src/index.js",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@chromex/reloader": "^0.0.6",
-    "@chromex/utils": "^0.0.8",
+    "@chromex/utils": "^0.0.9",
     "commander": "^3.0.2",
     "create-file-webpack": "^1.0.2",
     "find-up": "^4.1.0",

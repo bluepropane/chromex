@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/cli@0.3.0...@chromex/cli@0.3.1) (2019-11-25)
+
+**Note:** Version bump only for package @chromex/cli
+
+
+
+
+
 # [0.3.0](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/cli@0.2.8...@chromex/cli@0.3.0) (2019-11-25)
 
 
