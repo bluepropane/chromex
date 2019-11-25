@@ -18,7 +18,7 @@ const ALLOWED_PAGE_TYPES = {
 
 program.version(pkg.version);
 program.command('add [pageType]').action(async pageType => {
-  const extConfig = await chromex.resolveExtConfig();
+  const extConfig = await resolveExtConfig();
   const pageChoices = Object.values(ALLOWED_PAGE_TYPES);
   if (!pageType) {
     pageType = (
@@ -62,7 +62,7 @@ program.command('add [pageType]').action(async pageType => {
 });
 
 program.command('remove <pageType>').action(async pageType => {
-  const extConfig = await chromex.resolveExtConfig();
+  const extConfig = await resolveExtConfig();
   if (!Object.values(ALLOWED_PAGE_TYPES).includes(pageType)) {
     console.log(`\`${pageType}\` is not a valid page type.`);
     console.log(
@@ -92,6 +92,19 @@ program.command('remove <pageType>').action(async pageType => {
     configUpdater.commit();
     console.log(`Removed ${pageType} page entry from extension.config.js`);
   }
+});
+
+program.command('describe').action(async () => {
+  const chromex = require('@chromex/core');
+  console.log(
+    'Chromex configured webpack entrypoints:',
+    await chromex.injectWebpackEntrypoints()
+  );
+
+  console.log(
+    'Chromex configured webpack plugins:',
+    await chromex.injectWebpackPlugins()
+  );
 });
 
 program.parse(process.argv);
