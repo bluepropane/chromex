@@ -70,7 +70,7 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin }) {
       content: JSON.stringify(
         {
           ...(await configureManifest()),
-          ...ext.manifest,
+          ...(ext.manifest || {}),
         },
         null,
         2
