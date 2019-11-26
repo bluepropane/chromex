@@ -8,10 +8,10 @@ const path = require('path');
 
 const TEMPLATE_DIR = path.join(__dirname, 'template');
 
-function shell(cmd) {
+function shell(cmd, opts) {
   return new Promise((res, rej) => {
-    cp.exec(cmd, (err, out, stderr) => {
-      err ? rej(stderr) : res(out.substring(0, out.length - 1)); // remove newline char
+    cp.exec(cmd, opts, (err, out, stderr) => {
+      err ? rej(err, stderr) : res(out.substring(0, out.length - 1)); // remove newline char
     });
   });
 }
@@ -25,6 +25,12 @@ async function getUserInfo() {
     name,
     email,
   };
+}
+
+function install(outputDir) {
+  return shell('npm install --no-package-lock', {
+    cwd: path.join(process.cwd(), outputDir),
+  });
 }
 
 async function updatePkgJson(outputDir) {
@@ -48,28 +54,47 @@ function ensureCompatibility() {
 
 async function main(outputDir) {
   ensureCompatibility();
-  if (!outputDir) {
-    console.log('Usage: create-chrome-extension <project name>');
-    return false;
-  } else if (fs.existsSync(outputDir)) {
-    console.log(
-      `${outputDir} already exists, please remove it or choose another project name!`
-    );
-    return false;
-  }
-  const user = await getUserInfo();
+  // if (!outputDir) {
+  //   console.log('Usage: create-chrome-extension <project name>');
+  //   return false;
+  // } else if (fs.existsSync(outputDir)) {
+  //   console.log(
+  //     `${outputDir} already exists, please remove it or choose another project name!`
+  //   );
+  //   return false;
+  // }
+  // const user = await getUserInfo();
 
-  const templateVars = {
-    PROJECT_NAME: outputDir,
-    USER_NAME: user.name,
-    USER_EMAIL: user.email,
-  };
+  // const templateVars = {
+  //   PROJECT_NAME: outputDir,
+  //   USER_NAME: user.name,
+  //   USER_EMAIL: user.email,
+  // };
 
-  await copyTemplate(TEMPLATE_DIR, outputDir, templateVars);
+  // await copyTemplate(TEMPLATE_DIR, outputDir, templateVars);
 
-  await updatePkgJson(outputDir);
+  // await updatePkgJson(outputDir);
 
   console.log(`Generated new extension boilerplate in ${outputDir}`);
+  console.log(
+    'Installing packages - this might take a while (a couple minutes)...'
+  );
+  const successOutput = await install(outputDir).catch(err => {
+    console.error(
+      `Error occured while attempting to install node packages in ${outputDir} project:`,
+      err
+    );
+  });
+  console.log(successOutput);
+
+  console.log(`
+Success! To get started on your extension project, run:
+
+  cd ${outputDir} && npm run dev
+
+
+Happy hacking!
+  `);
   return true;
 }
 
