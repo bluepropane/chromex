@@ -70,7 +70,7 @@ In this demo, we will create a simple extension with a browser action popup.
 
 **1. Generate the project folder**
 
-     npx @chromex/cli new my-extension && cd my-extension
+     npx @chromex/init my-extension && cd my-extension
 
 
  This will generate a folder with named `my-extension` in the current working directory. 

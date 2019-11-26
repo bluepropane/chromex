@@ -1,0 +1,1 @@
+Boilerplate generator package for Chromex's [create-chrome-extension](https://github.com/bluepropane/create-chrome-extension/).
