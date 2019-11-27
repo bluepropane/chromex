@@ -7,7 +7,7 @@
     <img src="docs/assets/logo.png" alt="Logo" width="128" height="128">
   </a>
 
-  <h2 align="center">Chromex</h2>
+  <h2 align="center">chromex</h2>
 
   <p align="center">
     Fast and easy framework for development of Google Chrome extensions
@@ -31,7 +31,7 @@
 - [Prerequisites](#prerequisites)
 - [Quickstart](#quickstart)
 - [Documentation](#documentation)
-    - [1. Tutorial Overview](#1-tutorial-overview)
+    - [1. Overview](#1-overview)
     - [2. Customizing Extension Pages](#2-customizing-extension-pages)
     - [3. Publishing your extension](#3-publishing-your-extension)
 - [Roadmap](#roadmap)
@@ -69,22 +69,19 @@ Enough talking, give me my extension!
 In this demo, we will create a simple extension with a browser action popup.
 
 **1. Generate the project folder**
+  Run the following command in your terminal:
 
-     npx @chromex/init my-extension && cd my-extension
+     npx @chromex/init my-extension
 
-
- This will generate a folder with named `my-extension` in the current working directory. 
+  After some output, a folder named `my-extension` will be generated in the current working directory. 
 
 
 **2. Start the development server**
- 
- You can use your favourite package manager:
 
+    cd my-extension
     npm run dev
-    OR
-    yarn dev
 
-  This command should output some logs to the terminal. After a few seconds you should see a folder named `ext/` created in `my-extension/`. 
+  After some more output to the terminal, you should see a folder named `ext/` created in `my-extension/`. 
 
 
 **3. Load unpacked extension**
@@ -103,7 +100,7 @@ In this demo, we will create a simple extension with a browser action popup.
 
 ## Documentation
 
-#### [1. Tutorial Overview](https://github.com/bluepropane/create-chrome-extension/blob/master/docs/1-Overview.md)
+#### [1. Overview](https://github.com/bluepropane/create-chrome-extension/blob/master/docs/1-Overview.md)
 
 #### [2. Customizing Extension Pages](docs/2-Extension-Pages.md)
 
@@ -145,7 +142,7 @@ It doesn't have to fix a problem - it can also be something you have in mind tha
 <!-- LICENSE -->
 ## License
 
-Distributed under the GNU General Public License. See [`LICENSE`](LICENSE) for more information.
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
 
 
 
