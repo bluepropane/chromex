@@ -54,48 +54,54 @@ function ensureCompatibility() {
 
 async function main(outputDir) {
   ensureCompatibility();
-  // if (!outputDir) {
-  //   console.log('Usage: create-chrome-extension <project name>');
-  //   return false;
-  // } else if (fs.existsSync(outputDir)) {
-  //   console.log(
-  //     `${outputDir} already exists, please remove it or choose another project name!`
-  //   );
-  //   return false;
-  // }
-  // const user = await getUserInfo();
+  if (!outputDir) {
+    console.log('Usage: create-chrome-extension <project name>');
+    return false;
+  } else if (fs.existsSync(outputDir)) {
+    console.log(
+      `
+[Chromex] Unable to install into ${outputDir}: directory already exists.
+Please remove directory or choose another project name!
+`
+    );
+    return false;
+  }
+  const user = await getUserInfo();
 
-  // const templateVars = {
-  //   PROJECT_NAME: outputDir,
-  //   USER_NAME: user.name,
-  //   USER_EMAIL: user.email,
-  // };
+  const templateVars = {
+    PROJECT_NAME: outputDir,
+    USER_NAME: user.name,
+    USER_EMAIL: user.email,
+  };
 
-  // await copyTemplate(TEMPLATE_DIR, outputDir, templateVars);
+  await copyTemplate(TEMPLATE_DIR, outputDir, templateVars);
 
-  // await updatePkgJson(outputDir);
+  await updatePkgJson(outputDir);
 
   console.log(`Generated new extension boilerplate in ${outputDir}`);
   console.log(
-    'Installing packages - this might take a while (a couple minutes)...'
+    'Installing packages - this might take a while (a couple minutes)...\n'
   );
-  const successOutput = await install(outputDir).catch(err => {
-    console.error(
+  let success = true;
+  const output = await install(outputDir).catch(err => {
+    console.warn(
       `Error occured while attempting to install node packages in ${outputDir} project:`,
-      err
+      err,
+      `\nManual installation is required; proceed with instruction output below.`
     );
+    success = false;
   });
-  console.log(successOutput);
+  !!output && console.log(output);
 
   console.log(`
 Success! To get started on your extension project, run:
+  
 
-  cd ${outputDir} && npm run dev
+  cd ${outputDir} ${success ? '' : '&& npm install'}
+  npm run dev
+  
 
-
-Happy hacking!
-  `);
-  return true;
+Happy hacking!`);
 }
 
 module.exports = main;
