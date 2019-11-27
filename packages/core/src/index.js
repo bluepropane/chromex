@@ -10,7 +10,11 @@ const ChromexReloaderPlugin = require('@chromex/reloader');
 const CreateFileWebpack = require('create-file-webpack');
 const { dimensionedIconNames, getPageDir } = require('./utils');
 
-async function injectWebpackPlugins({ HtmlWebpackPlugin }) {
+class MockHtmlWebpackPlugin {}
+
+async function injectWebpackPlugins({
+  HtmlWebpackPlugin = MockHtmlWebpackPlugin,
+}) {
   const ext = await resolveExtConfig();
   const plugins = Object.entries(ext.pages)
     .flatMap(([pageType, pageConf]) => {
@@ -78,7 +82,6 @@ async function injectWebpackPlugins({ HtmlWebpackPlugin }) {
     })
   );
 
-  console.log('chromex configured plugins:', plugins);
   return plugins;
 }
 

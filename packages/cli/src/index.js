@@ -7,7 +7,6 @@ const inquirer = require('inquirer');
 const pkg = require('../package.json');
 const ConfigUpdater = require('./ConfigUpdater');
 const PageManager = require('./PageManager');
-const cceProxy = require('./cceProxy');
 
 const ALLOWED_PAGE_TYPES = {
   popup: 'popup',
@@ -96,6 +95,7 @@ program.command('remove <pageType>').action(async pageType => {
 
 program.command('describe').action(async () => {
   const chromex = require('@chromex/core');
+
   console.log(
     'Chromex configured webpack entrypoints:',
     await chromex.injectWebpackEntrypoints()
