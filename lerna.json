@@ -1,5 +1,5 @@
 {
-  "packages": ["packages/*", "./", "./template"],
+  "packages": ["packages/*", "./"],
   "version": "independent",
   "npmClient": "yarn",
   "command": {

@@ -35,7 +35,7 @@
     "prettier": "^1.18.2"
   },
   "dependencies": {
-    "@chromex/init": "0.0.1"
+    "@chromex/init": "latest"
   },
   "config": {
     "commitizen": {
