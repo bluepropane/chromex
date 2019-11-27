@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5](https://github.io/bluepropane/chromex/compare/@chromex/init@0.1.4...@chromex/init@0.1.5) (2019-11-27)
+
+**Note:** Version bump only for package @chromex/init
+
+
+
+
+
 ## [0.1.4](https://github.com/bluepropane/create-chrome-extension/compare/@chromex/init@0.1.3...@chromex/init@0.1.4) (2019-11-27)
 
 **Note:** Version bump only for package @chromex/init

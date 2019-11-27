@@ -1,6 +1,6 @@
 {
   "name": "@chromex/reloader",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Utils for live reloading of chrome extensions during development.",
   "module": "dist/plugin.js",
   "main": "dist/plugin.js",

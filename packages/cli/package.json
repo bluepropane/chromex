@@ -1,7 +1,7 @@
 {
   "name": "@chromex/cli",
   "description": "CLI to manage chromex-based extensions.",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "bin": {
     "chromex": "src/index.js"
   },
@@ -15,7 +15,7 @@
     "@babel/parser": "^7.7.3",
     "@babel/traverse": "^7.7.2",
     "@babel/types": "^7.7.2",
-    "@chromex/utils": "^0.0.9",
+    "@chromex/utils": "^0.0.10",
     "commander": "^3.0.2",
     "del": "^5.1.0",
     "inquirer": "^7.0.0",
