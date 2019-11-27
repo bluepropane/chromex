@@ -32,7 +32,7 @@ function normalizePageConf(pageConfs, extConfig) {
     }
   );
 
-  if (__DEV__ && extConfig.liveReload) {
+  if (global.__DEV__ && extConfig.liveReload) {
     normalizedPageConfs.push({ [PAGE_TYPES.RELOADER]: true });
   }
 
