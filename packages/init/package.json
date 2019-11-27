@@ -1,7 +1,7 @@
 {
   "name": "@chromex/init",
   "description": "Create chrome extension - boilerplate generator",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "bin": {
     "init": "src/index.js"
   },
