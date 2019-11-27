@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.io/bluepropane/chromex/compare/@chromex/core@0.1.7...@chromex/core@0.1.8) (2019-11-27)
+
+
+### Bug Fixes
+
+* undefined global variable, remove unused files ([0c7ea25](https://github.io/bluepropane/chromex/commit/0c7ea2556516083e20a06e0c83156fb7d018e112))
+
+
+
+
+
 ## [0.1.7](https://github.io/bluepropane/chromex/compare/@chromex/core@0.1.6...@chromex/core@0.1.7) (2019-11-27)
 
 **Note:** Version bump only for package @chromex/core

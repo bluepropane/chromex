@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.io/bluepropane/chromex/compare/@chromex/cli@0.3.3...@chromex/cli@0.3.4) (2019-11-27)
+
+
+### Bug Fixes
+
+* undefined global variable, remove unused files ([0c7ea25](https://github.io/bluepropane/chromex/commit/0c7ea2556516083e20a06e0c83156fb7d018e112))
+
+
+
+
+
 ## [0.3.3](https://github.io/bluepropane/chromex/compare/@chromex/cli@0.3.2...@chromex/cli@0.3.3) (2019-11-27)
 
 **Note:** Version bump only for package @chromex/cli
