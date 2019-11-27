@@ -4,14 +4,18 @@
   "description": "Synchronized key-value store across all pages of a chrome extension.",
   "main": "index.js",
   "keywords": [
-    "hot-reload",
+    "chrome-extension",
+    "chrome",
+    "boilerplate",
+    "livereload",
     "live-reload",
-    "chrome-extension"
+    "extension"
   ],
   "author": "bluepropane <rbluepropane@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "c0d2f9324dda85e1b5f31e8f8e58998f29f0d2c8"
+  "gitHead": "c0d2f9324dda85e1b5f31e8f8e58998f29f0d2c8",
+  "repository": "https://github.io/bluepropane/chromex"
 }

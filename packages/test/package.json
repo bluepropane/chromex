@@ -8,15 +8,15 @@
     "./client": "src/client.js"
   },
   "keywords": [
-    "hot-reload",
-    "live-reload",
     "chrome-extension",
-    "puppeteer",
-    "jest",
-    "jest-puppeteer"
+    "chrome",
+    "boilerplate",
+    "livereload",
+    "live-reload",
+    "extension"
   ],
   "author": "bluepropane <rbluepropane@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "jest": "^24.9.0",
     "jest-puppeteer": "^4.3.0"
@@ -24,5 +24,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "c0d2f9324dda85e1b5f31e8f8e58998f29f0d2c8"
+  "gitHead": "c0d2f9324dda85e1b5f31e8f8e58998f29f0d2c8",
+  "repository": "https://github.io/bluepropane/chromex"
 }

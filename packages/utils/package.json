@@ -18,5 +18,15 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "e29426f03824cd5cfb102639219acc916819165d"
+  "gitHead": "e29426f03824cd5cfb102639219acc916819165d",
+  "repository": "https://github.io/bluepropane/chromex",
+  "author": "bluepropane <rbluepropane@gmail.com>",
+  "keywords": [
+    "chrome-extension",
+    "chrome",
+    "boilerplate",
+    "livereload",
+    "live-reload",
+    "extension"
+  ]
 }
