@@ -3,7 +3,7 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/bluepropane/create-chrome-extension">
+  <a href="https://github.com/bluepropane/chromex">
     <img src="docs/assets/logo.png" alt="Logo" width="128" height="128">
   </a>
 
@@ -68,7 +68,7 @@
 - `npm >= 5.2.0` (`npx` support)
 - `Chrome >= 55`
 
-This project was developed on macOS, so it should work fine on Linux-based systems. You might run into issues developing on Windows as it hasn't been tested yet. In any case, report issues [here!](https://github.com/bluepropane/create-chrome-extension/issues)
+This project was developed on macOS, so it should work fine on Linux-based systems. You might run into issues developing on Windows as it hasn't been tested yet. In any case, report issues [here!](https://github.com/bluepropane/chromex/issues)
 
 ## Quickstart
 Enough talking, give me my extension!
@@ -107,7 +107,7 @@ In this demo, we will create a simple extension with a browser action popup.
 
 ## Documentation
 
-#### [1. Overview](https://github.com/bluepropane/create-chrome-extension/blob/master/docs/1-Overview.md)
+#### [1. Overview](https://github.com/bluepropane/chromex/blob/master/docs/1-Overview.md)
 
 #### [2. Customizing Extension Pages](docs/2-Extension-Pages.md)
 
@@ -129,13 +129,13 @@ In this demo, we will create a simple extension with a browser action popup.
 
 [@bluepropane1](https://twitter.com/bluepropane1) - rbluepropane@gmail.com
 
-Project Link: [https://github.com/bluepropane/create-chrome-extension](https://github.com/bluepropane/create-chrome-extension)
+Project Link: [https://github.com/bluepropane/chromex](https://github.com/bluepropane/chromex)
 
 
 
 <!-- CONTRIBUTING -->
 ## Contributing
-I started on this project simply because I am interested in chrome extensions. Still active in the process of developing it but can't do everything solo, so any contribution at all is greatly appreciated! You drop me a message, create an [issue](https://github.com/bluepropane/create-chrome-extension/issues) or [pull request](https://github.com/bluepropane/create-chrome-extension/pulls) :)
+I started on this project simply because I am interested in chrome extensions. Still active in the process of developing it but can't do everything solo, so any contribution at all is greatly appreciated! You drop me a message, create an [issue](https://github.com/bluepropane/chromex/issues) or [pull request](https://github.com/bluepropane/chromex/pulls) :)
 
 
 
@@ -151,7 +151,13 @@ It doesn't have to fix a problem - it can also be something you have in mind tha
 
 Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
 
-<div style="height: 210px" />
+.
+.
+.
+.
+.
+.
+
 
 
 
