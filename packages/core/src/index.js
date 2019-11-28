@@ -38,7 +38,7 @@ async function injectWebpackPlugins({
             ),
             hash: true,
             templateParameters: {
-              title: "$(PROJECT_NAME)'s New Tab",
+              title: `New Tab | ${ext.name}`,
               faviconPath: '',
               ...pageConf.templateParameters,
             },
@@ -53,7 +53,7 @@ async function injectWebpackPlugins({
             ),
             hash: true,
             templateParameters: {
-              title: "Configure options | $(PROJECT_NAME)'",
+              title: `Configure options | ${ext.name}`,
               faviconPath: '',
               ...pageConf.templateParameters,
             },
@@ -124,7 +124,9 @@ async function configureManifest() {
           return {
             browser_action: {
               default_icon: icons,
-              default_title: pageConf.title,
+              default_title:
+                (pageConf.templateParameters || {}).title ||
+                `Popup | ${ext.name}`,
               default_popup: pageConf.htmlOutput || 'popup.html',
             },
           };
@@ -141,7 +143,10 @@ async function configureManifest() {
           };
         case PAGE_TYPES.OPTIONS:
           return {
-            options_page: pageConf.htmlFilename,
+            options_ui: {
+              page: pageConf.htmlFilename,
+              open_in_tab: !pageConf.embedded,
+            },
           };
         case PAGE_TYPES.NEWTAB_OVERRIDE:
           return {
