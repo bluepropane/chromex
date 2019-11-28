@@ -15,11 +15,18 @@
     <a href="#quickstart"><strong>Get started »</strong></a>
     <br />
     <br />
-   <a href="https://github.com/bluepropane/create-chrome-extension/issues">Got an issue? Report it here</a>
+   Got an issue? Report it <a href="https://github.com/bluepropane/chromex/issues">here</a>
     <br />
-    <a href="https://github.com/bluepropane/create-chrome-extension/issues"> Request features here</a>
+    -
+    <br />
+    Request features <a href="https://github.com/bluepropane/chromex/issues"> here</a>
+    <br/>
+    -
+    <br/>
+    Questions? <a href="#contact">Reach out!</a>
   </p>
 </p>
+
 
 
 
@@ -144,6 +151,7 @@ It doesn't have to fix a problem - it can also be something you have in mind tha
 
 Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
 
+<div style="height: 210px" />
 
 
 

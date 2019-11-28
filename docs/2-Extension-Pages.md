@@ -17,3 +17,19 @@ Two things happen here:
 2. The `newtab_override` entry is generated in `extension.config.js`'s `pages` property.
 
 If you have your development environment (`npm run dev`) running, try navigating to a new tab in chrome. You should see that your default new tab page has been overriden by your very own New Tab page!
+
+
+## Extension Page Types
+
+### Browser Action Popup
+[Chrome documentation](https://developer.chrome.com/extensions/browserAction)
+
+
+### Background Scripts
+[Chrome documentation](https://developer.chrome.com/extensions/background_pages)
+
+### New Tab Override
+[Chrome documentation](https://developer.chrome.com/extensions/override)
+
+### Options
+[Chrome documentation](https://developer.chrome.com/extensions/options)
