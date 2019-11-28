@@ -26,6 +26,7 @@ const configBuilder = async () => {
     output: {
       path: outputDir,
       filename: '[name].js',
+      chunkFilename: '[id].[chunkhash].js',
     },
     module: {
       rules: [
@@ -40,16 +41,14 @@ const configBuilder = async () => {
           },
         },
         {
-          test: /\.css$/,
+          test: /\.(sa|sc|c)ss$/,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                // publicPath: '../',
                 hmr: __DEV__,
               },
             },
-            // 'style-loader',
             'css-loader',
           ],
         },
@@ -77,8 +76,8 @@ const configBuilder = async () => {
         HtmlWebpackPlugin,
       })),
       new MiniCssExtractPlugin({
-        filename: '[name].css',
-        chunkFilename: '[id].css',
+        filename: __DEV__ ? '[name].css' : '[name].[hash].css',
+        chunkFilename: __DEV__ ? '[id].css' : '[id].[hash].css',
       }),
       new PostCompile(async () => {
         console.log('[Post Compile] Generating icons for required dimensions');

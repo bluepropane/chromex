@@ -22,12 +22,11 @@ class ChromexReloaderPlugin {
         case 'HELLO':
           identity = msg.id;
       }
-      console.log('Received', msg);
     });
 
-    socket.on('close', (...args) => {
-      console.log('Socket closed:', identity);
-    });
+    // socket.on('close', (...args) => {
+    //   console.log('Socket closed:', identity);
+    // });
   }
 
   broadcastReload() {
