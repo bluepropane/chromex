@@ -14,22 +14,25 @@ Or, if you are using yarn:
 
 Two things happen here:
 1. The page boilerplate is generated in `src/pages/newtab_override`
-2. The `newtab_override` entry is generated in `extension.config.js`'s `pages` property.
+2. The `newtab_override` config entry is generated in `extension.config.js`'s `pages` property.
 
 If you have your development environment (`npm run dev`) running, try navigating to a new tab in chrome. You should see that your default new tab page has been overriden by your very own New Tab page!
 
 
-## Extension Page Types
+## Page Config API
 
-### Browser Action Popup
+The following properties are generic to all page types:
+
+### `popup`: browser action Popup
 [Chrome documentation](https://developer.chrome.com/extensions/browserAction)
 
 
-### Background Scripts
+### `bg`: background script
 [Chrome documentation](https://developer.chrome.com/extensions/background_pages)
 
-### New Tab Override
+### `newtab_override`: new tab override
 [Chrome documentation](https://developer.chrome.com/extensions/override)
 
-### Options
+### `options`: options page
 [Chrome documentation](https://developer.chrome.com/extensions/options)
+- `embedded` {Boolean} if `true`, will use an embedded options page as described [here](https://developer.chrome.com/extensions/options#declare_options). Full page options will be used if otherwise.
