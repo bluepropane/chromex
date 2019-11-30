@@ -169,6 +169,6 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[license-shield]: https://img.shields.io/badge/License-GPLv3-blue.svg
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/bluepropane/chromex
+[license-url]: https://github.com/bluepropane/chromex/blob/master/LICENSE
 [product-screenshot]: images/screenshot.png
