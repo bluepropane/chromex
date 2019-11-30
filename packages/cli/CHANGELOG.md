@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.io/bluepropane/chromex/compare/@chromex/cli@0.3.4...@chromex/cli@0.4.0) (2019-11-30)
+
+
+### Features
+
+* **@chromex/cli:** add support for creating content scripts ([3eb5884](https://github.io/bluepropane/chromex/commit/3eb5884cd53914fd788e8378937d31a0b5b71bb0))
+
+
+
+
+
 ## [0.3.4](https://github.io/bluepropane/chromex/compare/@chromex/cli@0.3.3...@chromex/cli@0.3.4) (2019-11-27)
 
 

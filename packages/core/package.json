@@ -1,6 +1,6 @@
 {
   "name": "@chromex/core",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "main": "src/index.js",
   "module": "src/index.js",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "dev": "yarn build -w"
   },
   "dependencies": {
-    "@chromex/reloader": "^0.0.8",
+    "@chromex/reloader": "^0.0.9",
     "@chromex/utils": "^0.0.11",
     "commander": "^3.0.2",
     "create-file-webpack": "^1.0.2",
