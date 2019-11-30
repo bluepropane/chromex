@@ -150,7 +150,7 @@ async function configureManifest() {
           };
         case PAGE_TYPES.CONTENT:
           return {
-            content_scripts: [pageConf],
+            content_scripts: Array.isArray(pageConf) ? pageConf : [pageConf],
             permissions: ['activeTab'],
           };
         case PAGE_TYPES.NEWTAB_OVERRIDE:
