@@ -34,9 +34,7 @@
     "gh-pages": "^2.1.1",
     "prettier": "^1.18.2"
   },
-  "dependencies": {
-    "@chromex/init": "latest"
-  },
+  "dependencies": {},
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

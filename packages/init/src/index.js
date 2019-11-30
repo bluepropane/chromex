@@ -55,7 +55,7 @@ function ensureCompatibility() {
 async function main(outputDir) {
   ensureCompatibility();
   if (!outputDir) {
-    console.log('Usage: create-chrome-extension <project name>');
+    console.log(`Usage: npx @chromex/init <project name>`);
     return false;
   } else if (fs.existsSync(outputDir)) {
     console.log(
