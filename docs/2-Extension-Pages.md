@@ -30,9 +30,13 @@ The following properties are generic to all page types:
 ### `bg`: background script
 [Chrome documentation](https://developer.chrome.com/extensions/background_pages)
 
+### `content`: page-specific content scripts
+[Chrome documentation](https://developer.chrome.com/extensions/content_scripts)
+
 ### `newtab_override`: new tab override
 [Chrome documentation](https://developer.chrome.com/extensions/override)
 
 ### `options`: options page
 [Chrome documentation](https://developer.chrome.com/extensions/options)
 - `embedded` {Boolean} if `true`, will use an embedded options page as described [here](https://developer.chrome.com/extensions/options#declare_options). Full page options will be used if otherwise.
+  

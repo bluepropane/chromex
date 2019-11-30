@@ -4,7 +4,8 @@ module.exports = {
     BG: 'bg',
     RELOADER: 'reloader',
     OPTIONS: 'options',
-    NEWTAB_OVERRIDE: 'newtab_override',
+    NEWTAB_OVERRIDE: 'newtab-override',
+    CONTENT: 'content',
   },
   ICON_OUTPUT_SIZES: [16, 48, 128],
 };

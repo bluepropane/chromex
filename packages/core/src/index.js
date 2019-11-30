@@ -3,7 +3,7 @@ global.__DEV__ = process.env.NODE_ENV === 'development';
 
 const { resolveExtConfig } = require('@chromex/utils');
 const generateIcons = require('./generateIcons');
-const { PAGE_TYPES, ICON_OUTPUT_SIZES } = require('./constants');
+const { PAGE_TYPES, ICON_OUTPUT_SIZES } = require('@chromex/utils/constants');
 const path = require('path');
 const merge = require('lodash.merge');
 const ChromexReloaderPlugin = require('@chromex/reloader');
@@ -147,6 +147,11 @@ async function configureManifest() {
               page: pageConf.htmlFilename,
               open_in_tab: !pageConf.embedded,
             },
+          };
+        case PAGE_TYPES.CONTENT:
+          return {
+            content_scripts: [pageConf],
+            permissions: ['activeTab'],
           };
         case PAGE_TYPES.NEWTAB_OVERRIDE:
           return {

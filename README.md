@@ -56,7 +56,8 @@
 - [Preact](https://preactjs.com) as frontend framework
 - CLI tools to generate pages as required for your extension. Currently supports popular use cases:
     - [Browser action popup](https://developer.chrome.com/extensions/browserAction)
-    - [Background script](https://developer.chrome.com/extensions/background_pages)
+    - [Background Script](https://developer.chrome.com/extensions/background_pages)
+    - [Content Scripts](https://developer.chrome.com/extensions/content_scripts)
     - [New tab override](https://developer.chrome.com/extensions/override)
     - [Options page](https://developer.chrome.com/extensions/options)
 - Auto resizing and generation of icon sizes based on Google Chrome's [manifest requirements](https://developer.chrome.com/extensions/manifest/icons)
