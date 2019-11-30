@@ -106,6 +106,7 @@ In this demo, we will create a simple extension with a browser action popup.
 
   ![Voila](docs/assets/voila.png)
 
+
 ## Documentation
 
 #### [1. Overview](https://github.com/bluepropane/chromex/blob/master/docs/1-Overview.md)
@@ -118,7 +119,7 @@ In this demo, we will create a simple extension with a browser action popup.
 <!-- ROADMAP -->
 ## Roadmap
 
-1.  Support page templates using other frontend frameworks e.g. [React](https://reactjs.org), [Vue](https://vuejs.org) (currently supports only [preact](https://preactjs.com)
+1.  Support page templates using other frontend frameworks e.g. [React](https://reactjs.org), [Vue](https://vuejs.org) (currently supports only [preact](https://preactjs.com))
 2.  More comprehensive documentation
 3.  [HMR](https://webpack.js.org/concepts/hot-module-replacement/) Support
 4.  Better testing
@@ -153,10 +154,15 @@ It doesn't have to fix a problem - it can also be something you have in mind tha
 Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
 
 .
+
 .
+
 .
+
 .
+
 .
+
 .
 
 

@@ -21,8 +21,6 @@ If you have your development environment (`npm run dev`) running, try navigating
 
 ## Page Config API
 
-The following properties are generic to all page types:
-
 ### `popup`: browser action Popup
 [Chrome documentation](https://developer.chrome.com/extensions/browserAction)
 

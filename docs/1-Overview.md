@@ -15,7 +15,6 @@ Let's quickly run through the directory structure in `my-extension` that you've 
 ├── .babelrc.js
 ├── .eslintrc.js
 ├── .gitignore
-├── .prettierrc.js
 ├── extension.config.js
 ├── package.json
 ├── README.md
