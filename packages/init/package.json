@@ -16,7 +16,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.io/bluepropane/chromex",
+  "repository": "https://github.com/bluepropane/chromex",
   "author": "bluepropane <rbluepropane@gmail.com>",
   "keywords": [
     "chrome-extension",

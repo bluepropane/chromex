@@ -35,7 +35,7 @@
     "access": "public"
   },
   "gitHead": "5adc24e522cbe5f6100fd58d2d2ce75ecf14c353",
-  "repository": "https://github.io/bluepropane/chromex",
+  "repository": "https://github.com/bluepropane/chromex",
   "author": "bluepropane <rbluepropane@gmail.com>",
   "keywords": [
     "chrome-extension",
