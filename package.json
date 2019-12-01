@@ -6,7 +6,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "repository": "https://github.io/bluepropane",
+  "repository": "https://github.io/bluepropane/chromex",
   "author": "bluepropane <rbluepropane@gmail.com>",
   "license": "MIT",
   "keywords": [

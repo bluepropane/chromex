@@ -7,7 +7,7 @@ const pkg = require(pkgPath);
 console.log(pkg.name);
 
 const commonFields = {
-  repository: 'https://github.io/bluepropane/chromex',
+  repository: 'https://github.com/bluepropane/chromex',
   author: 'bluepropane <rbluepropane@gmail.com>',
   license: 'MIT',
   keywords: [
