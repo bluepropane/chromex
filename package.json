@@ -24,7 +24,8 @@
     "release": ". scripts/release.sh",
     "publish": ". scripts/publish.sh",
     "setup": "lerna bootstrap --include-dependencies --force-local",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "housekeeping": "lerna exec node `pwd`/scripts/housekeeping.js --stream"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
