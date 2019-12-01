@@ -77,6 +77,7 @@ Enough talking, give me my extension!
 In this demo, we will create a simple extension with a browser action popup.
 
 **1. Generate the project folder**
+
   Run the following command in your terminal:
 
      npx @chromex/init my-extension
