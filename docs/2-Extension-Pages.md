@@ -33,6 +33,44 @@ If you have your development environment (`npm run dev`) running, try navigating
 
 ### `newtab_override`: new tab override
 [Chrome documentation](https://developer.chrome.com/extensions/override)
+- `templateParameters`: An object of template variables to be passed to the `index.html` page, as defined in [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin#options). Template variables can be accessed via `<%=VARIABLE_NAME>`, where VARIABLE_NAME is a key in `templateParameters`. 
+  E.g. in `newtab_override/index.html`:
+  ```html
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title><%= foo %></title>
+    </head>
+    <body>
+    </body>
+  </html>
+  ```
+  and in `extension.config.js`:
+  ```js
+  ...
+  pages: {
+    newtab_override: {
+      templateParameters: {
+          foo: 'bar'
+      }
+    }
+  }
+  ...
+  ```
+  
+  will produce the following output:
+  ```html
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>bar</title>
+    </head>
+    <body>
+    </body>
+  </html>
+  ```
+
+  `title` and `faviconPath` are template variables that have been populated by default - to overwrite, simply define them explicitly.
 
 ### `options`: options page
 [Chrome documentation](https://developer.chrome.com/extensions/options)
