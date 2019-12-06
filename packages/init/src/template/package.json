@@ -1,5 +1,5 @@
 {
-  "name": "$(PROJECT_NAME)",
+  "name": "template",
   "version": "0.1.3",
   "description": "A description of your extension",
   "main": "index.js",
