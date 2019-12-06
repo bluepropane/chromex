@@ -1,7 +1,7 @@
 {
   "name": "@chromex/init",
   "description": "Create chrome extension - boilerplate generator",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "bin": {
     "init": "src/index.js"
   },
@@ -15,7 +15,7 @@
   "main": "src/index.js",
   "license": "MIT",
   "dependencies": {
-    "@chromex/utils": "^0.0.12"
+    "@chromex/utils": "^0.0.13"
   },
   "publishConfig": {
     "access": "public"

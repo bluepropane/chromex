@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/bluepropane/chromex/compare/@chromex/core@0.0.7...@chromex/core@0.3.0) (2019-12-06)
+
+
+### Bug Fixes
+
+* undefined global variable, remove unused files ([0c7ea25](https://github.com/bluepropane/chromex/commit/0c7ea25))
+* **@chromex/core:** move pkg from devDep to dep due to missing dependency ([07e95bf](https://github.com/bluepropane/chromex/commit/07e95bf))
+* **@chromex/core:** remove file scoping ([9fe4c73](https://github.com/bluepropane/chromex/commit/9fe4c73))
+* **@chromex/core:** unable to find constants file ([4c25e18](https://github.com/bluepropane/chromex/commit/4c25e18))
+
+
+### Features
+
+* **@chromex/cli:** add support for creating content scripts ([3eb5884](https://github.com/bluepropane/chromex/commit/3eb5884))
+* Add boilerplate for options page ([75aa096](https://github.com/bluepropane/chromex/commit/75aa096))
+
+
+
+
+
 ## [0.2.1](https://github.com/bluepropane/chromex/compare/@chromex/core@0.2.0...@chromex/core@0.2.1) (2019-12-01)
 
 **Note:** Version bump only for package @chromex/core

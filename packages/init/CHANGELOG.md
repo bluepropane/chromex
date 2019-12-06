@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2019-12-06)
+
+
+### Features
+
+* **@chromex/cli:** move boilerplate generator to @chromex/init pkg ([86c522b](https://github.com/bluepropane/chromex/commit/86c522b))
+
+
+
+
+
 ## [0.1.8](https://github.com/bluepropane/chromex/compare/@chromex/init@0.1.7...@chromex/init@0.1.8) (2019-12-01)
 
 **Note:** Version bump only for package @chromex/init
