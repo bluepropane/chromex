@@ -52,6 +52,17 @@ function ensureCompatibility() {
   }
 }
 
+/**
+ * .gitignore file gets ignored when copying template to target dir, so this function generates the
+ * gitignore file after in the target dir the template has been copied over
+ */
+function createGitIgnore(targetDir) {
+  fs.copyFile(
+    path.join('.', 'gitignore.template'),
+    path.join(targetDir, '.gitignore')
+  );
+}
+
 async function main(outputDir) {
   ensureCompatibility();
   if (!outputDir) {
@@ -75,7 +86,6 @@ Please remove directory or choose another project name!
   };
 
   await copyTemplate(TEMPLATE_DIR, outputDir, templateVars);
-
   await updatePkgJson(outputDir);
 
   console.log(`Generated new extension boilerplate in ${outputDir}`);
@@ -83,6 +93,9 @@ Please remove directory or choose another project name!
     'Installing packages - this might take a while (a couple minutes)...\n'
   );
   let success = true;
+
+  createGitIgnore();
+
   const output = await install(outputDir).catch(err => {
     console.warn(
       `Error occured while attempting to install node packages in ${outputDir} project:`,

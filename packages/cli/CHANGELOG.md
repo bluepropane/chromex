@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/bluepropane/chromex/compare/@chromex/cli@0.0.6...@chromex/cli@0.5.0) (2019-12-06)
+
+
+### Bug Fixes
+
+* undefined global variable, remove unused files ([0c7ea25](https://github.com/bluepropane/chromex/commit/0c7ea25))
+* **@chromex/cli:** add prettier to deplist ([174e048](https://github.com/bluepropane/chromex/commit/174e048))
+* **@chromex/cli:** fix missing dep issue due to it being in devDeps ([70235c4](https://github.com/bluepropane/chromex/commit/70235c4))
+
+
+### Features
+
+* **@chromex/cli:** add support for creating content scripts ([3eb5884](https://github.com/bluepropane/chromex/commit/3eb5884))
+* **@chromex/cli:** move boilerplate generator to @chromex/init pkg ([86c522b](https://github.com/bluepropane/chromex/commit/86c522b))
+* Add boilerplate for options page ([75aa096](https://github.com/bluepropane/chromex/commit/75aa096))
+* Port CCE's cli to @chromex/cli ([0275843](https://github.com/bluepropane/chromex/commit/0275843))
+
+
+
+
+
 ## [0.4.1](https://github.com/bluepropane/chromex/compare/@chromex/cli@0.4.0...@chromex/cli@0.4.1) (2019-12-01)
 
 **Note:** Version bump only for package @chromex/cli

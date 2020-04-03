@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.10](https://github.com/bluepropane/chromex/compare/@chromex/test@0.0.7...@chromex/test@0.0.10) (2019-12-06)
+
+**Note:** Version bump only for package @chromex/test
+
+
+
+
+
 ## [0.0.9](https://github.com/bluepropane/chromex/compare/@chromex/test@0.0.8...@chromex/test@0.0.9) (2019-12-01)
 
 **Note:** Version bump only for package @chromex/test

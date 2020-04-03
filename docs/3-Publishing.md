@@ -13,3 +13,7 @@ Some key points to note are:
 
  This will 1) bump the version number in `package.json` according to [standard-version](https://github.com/conventional-changelog/standard-version), and 2) create a production-ready ZIP of your extension (named `ext.zip`) in your project root folder. Simply select to file when prompted to upload your app by following the official tutorial link above.
 
+
+# Managing new releases over time
+
+Let's say you have published an initial version of your extension

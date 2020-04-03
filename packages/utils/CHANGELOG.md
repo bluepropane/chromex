@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.13](https://github.com/bluepropane/chromex/compare/@chromex/utils@0.0.7...@chromex/utils@0.0.13) (2019-12-06)
+
+
+### Bug Fixes
+
+* undefined global variable, remove unused files ([0c7ea25](https://github.com/bluepropane/chromex/commit/0c7ea25))
+* **@chromex/utils:** add node glob as dep ([cea3052](https://github.com/bluepropane/chromex/commit/cea3052))
+
+
+
+
+
 ## [0.0.12](https://github.com/bluepropane/chromex/compare/@chromex/utils@0.0.11...@chromex/utils@0.0.12) (2019-12-01)
 
 **Note:** Version bump only for package @chromex/utils

@@ -1,6 +1,6 @@
 {
   "name": "@chromex/test",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Functional tests for chrome extensions.",
   "module": "dist/plugin.js",
   "main": "dist/plugin.js",
