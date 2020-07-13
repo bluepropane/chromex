@@ -44,7 +44,7 @@
     "mini-css-extract-plugin": "^0.7.0",
     "post-compile-webpack-plugin": "^0.1.2",
     "prettier": "^1.18.2",
-    "standard-version": "^6.0.1",
+    "standard-version": "^8.0.1",
     "style-loader": "^0.23.1",
     "svg-inline-loader": "^0.8.0",
     "terser-webpack-plugin": "^1.3.0",
