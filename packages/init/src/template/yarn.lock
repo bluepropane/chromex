@@ -738,29 +738,29 @@
     webpack-sources "^1.1.0"
     yauzl "^2.8.0"
 
-"@chromex/cli@^0.0.4":
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/@chromex/cli/-/cli-0.3.1.tgz#d89a82b958529ea2ee49bfb480780b791768f9d5"
-  integrity sha512-kCq9Aa0CCCcpGjULdWomvpG1SvKJGP/zXawI9BAbq2r3Vemqh3vFnSPiQ0f5+BMfsJoCm7J5fLynP9dZkNHTLw==
+"@chromex/cli@^0.3.2":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@chromex/cli/-/cli-0.3.4.tgz#29110b92bfe28e06ecbbe7cbe791e2b51dce3473"
+  integrity sha512-eSvAQArWQxjORyQcquni6AGvtaDn8vOS0wBY5Xfs5bmQ2i7e/83m1lQJHFaRsX64IjQs+jcEuzXTTFGi1ygMTQ==
   dependencies:
     "@babel/core" "^7.6.4"
     "@babel/generator" "^7.7.2"
     "@babel/parser" "^7.7.3"
     "@babel/traverse" "^7.7.2"
     "@babel/types" "^7.7.2"
-    "@chromex/utils" "^0.0.9"
+    "@chromex/utils" "^0.0.11"
     commander "^3.0.2"
     del "^5.1.0"
     inquirer "^7.0.0"
     prettier "^1.19.1"
 
-"@chromex/core@^0.0.1":
-  version "0.1.5"
-  resolved "https://registry.npmjs.org/@chromex/core/-/core-0.1.5.tgz#b79549b38a6e173ab3cfc19fca8cd59a88a6904e"
-  integrity sha512-+FdJSXBOhQwey6hJuCsLgcNq68/2u1slP/EF+3iwCJDbgwml8dsquEAXQvY4tb3g724ulLYlianiEdGoJnmiRg==
+"@chromex/core@^0.1.6":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@chromex/core/-/core-0.1.8.tgz#bdfe9bf81b1c1c859ceb572e85ae564906e1c0c1"
+  integrity sha512-DZ4RJoiVJQplRlfkq7cMtRnFAQcmBxa3205815Yhaj9PGf5T8zSssptWSC9XRE5ew7EAqTaJa1CKf1avJ+CeYA==
   dependencies:
-    "@chromex/reloader" "^0.0.6"
-    "@chromex/utils" "^0.0.9"
+    "@chromex/reloader" "^0.0.8"
+    "@chromex/utils" "^0.0.11"
     commander "^3.0.2"
     create-file-webpack "^1.0.2"
     find-up "^4.1.0"
@@ -770,22 +770,17 @@
     sharp "^0.23.1"
     ws "^7.2.0"
 
-"@chromex/reloader@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/@chromex/reloader/-/reloader-0.0.6.tgz#977662f7e878eecedb61def8c96c477c6f8e4b14"
-  integrity sha512-02T+hbFOjUxNXTDouPjzHpuP4E+wldLD0vEhepgMwK+QanTdZsgW+OCTNVF93XAX0jSaGUGxW3heq0oIOuUfpA==
+"@chromex/reloader@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@chromex/reloader/-/reloader-0.0.8.tgz#13863da320319d704b3340d12c288252422a6369"
+  integrity sha512-UKMKELHJhAf7aahpcJG7A4vIePaxhTyYwLDVN3dfUXFI7pdlRsA95bU0uDa0znm0NYxb1ilSaEgZbvmwTQceaQ==
   dependencies:
     ncp "^2.0.0"
 
-"@chromex/sync-store@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/@chromex/sync-store/-/sync-store-0.0.4.tgz#a19d705e0e121d5ed57fc150bc0cfc3b2197b52c"
-  integrity sha512-cuwb9CqHegtxbEEeu5woeTxmOfLe/TT7SyxCmgOX3a559wVMCQtfGe19Xu7PMa6jWHZduX6BbFtaAKqvIdF+hw==
-
-"@chromex/utils@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.npmjs.org/@chromex/utils/-/utils-0.0.9.tgz#b982ee54feaefc7e123a3cfb41706fba26763ca0"
-  integrity sha512-jfeK/h0DiXPVHUf6OGR0ir1MNw3xxIoCvCoflZFdES6lnH0jJdflR+DWO94K+/UXOcOieVXIN4Ml9Yuu9te+MQ==
+"@chromex/utils@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@chromex/utils/-/utils-0.0.11.tgz#8b6789a766b9698bca04479d9a2c9c07ae57f0f1"
+  integrity sha512-HF099bmjLb9oxdrHY4ZPiLLzPMPGhGqbEI7gh68uYzBQbdZ4HaQO+wuzonargvoUjAMROnuvL/kziYBNmBU2hA==
   dependencies:
     find-up "^4.1.0"
     glob "^7.1.6"
@@ -1442,18 +1437,18 @@ archiver-utils@^2.1.0:
     normalize-path "^3.0.0"
     readable-stream "^2.0.0"
 
-archiver@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/archiver/-/archiver-3.1.1.tgz#9db7819d4daf60aec10fe86b16cb9258ced66ea0"
-  integrity sha512-5Hxxcig7gw5Jod/8Gq0OneVgLYET+oNHcxgWItq4TbhOzRLKNAFUb9edAftiMKXvXfCB0vbGrJdZDNq0dWMsxg==
+archiver@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/archiver/-/archiver-4.0.2.tgz#43c72865eadb4ddaaa2fb74852527b6a450d927c"
+  integrity sha512-B9IZjlGwaxF33UN4oPbfBkyA4V1SxNLeIhR1qY8sRXSsbdUkEHrrOvwlYFPx+8uQeCe9M+FG6KgO+imDmQ79CQ==
   dependencies:
     archiver-utils "^2.1.0"
-    async "^2.6.3"
+    async "^3.2.0"
     buffer-crc32 "^0.2.1"
-    glob "^7.1.4"
-    readable-stream "^3.4.0"
-    tar-stream "^2.1.0"
-    zip-stream "^2.1.2"
+    glob "^7.1.6"
+    readable-stream "^3.6.0"
+    tar-stream "^2.1.2"
+    zip-stream "^3.0.1"
 
 are-we-there-yet@~1.1.2:
   version "1.1.5"
@@ -1576,12 +1571,10 @@ async-limiter@^1.0.0, async-limiter@~1.0.0:
   resolved "https://registry.npmjs.org/async-limiter/-/async-limiter-1.0.1.tgz#dd379e94f0db8310b08291f9d64c3209766617fd"
   integrity sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==
 
-async@^2.6.1, async@^2.6.3:
-  version "2.6.3"
-  resolved "https://registry.npmjs.org/async/-/async-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
-  integrity sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==
-  dependencies:
-    lodash "^4.17.14"
+async@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/async/-/async-3.2.0.tgz#b3a2685c5ebb641d3de02d161002c60fc9f85720"
+  integrity sha512-TR2mEZFVOj2pLStYxLht7TyfuRzaydfpxr3k9RpHIzMgw7A64dzsdqCxH1WJyQdoe8T10nDXd9wnEigmiuHIZw==
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -1722,13 +1715,13 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bestzip@^2.1.4:
-  version "2.1.5"
-  resolved "https://registry.npmjs.org/bestzip/-/bestzip-2.1.5.tgz#815980248bbbd907fa724d5c5e5cb9fd295619d3"
-  integrity sha512-ieNnkUNC4iF3eC8L+00Gd/niBqyjqZ28UnKYOSozWDBluqht3NMlQXLJVi47mehwgSsvGq+GqvEmVWZHQy2nrQ==
+bestzip@^2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/bestzip/-/bestzip-2.1.7.tgz#f45492130967e0ebb302c4677fcb30c2e7831440"
+  integrity sha512-Eg5ZP0Viw1beJydZLbW246oCUnvtKGi7DhcB6IlKxP03NaxKCGVhKJD/jY4MLFRINhepfVEhAhnlc/uIxc9dHA==
   dependencies:
-    archiver "^3.0.0"
-    async "^2.6.1"
+    archiver "^4.0.2"
+    async "^3.2.0"
     glob "^7.1.3"
     which "^1.3.1"
     yargs "^13.2.4"
@@ -1754,6 +1747,15 @@ bl@^3.0.0:
   integrity sha512-EUAyP5UHU5hxF8BPT0LKW8gjYLhq1DQIcneOX/pL/m2Alo+OYDQAJlHq+yseMP50Os2nHXOSic6Ss3vSQeyf4A==
   dependencies:
     readable-stream "^3.0.1"
+
+bl@^4.0.1:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/bl/-/bl-4.0.3.tgz#12d6287adc29080e22a705e5764b2a9522cdc489"
+  integrity sha512-fs4G6/Hu4/EE+F75J8DuN/0IpQqNjAdC7aEQv7Qt8MHGUH7Ckv2MwTEEeN9QehD0pfIDkMI1bkHYkKy7xHyKIg==
+  dependencies:
+    buffer "^5.5.0"
+    inherits "^2.0.4"
+    readable-stream "^3.4.0"
 
 bluebird@^3.5.5:
   version "3.7.1"
@@ -1921,6 +1923,14 @@ buffer@^5.1.0:
   version "5.4.3"
   resolved "https://registry.npmjs.org/buffer/-/buffer-5.4.3.tgz#3fbc9c69eb713d323e3fc1a895eee0710c072115"
   integrity sha512-zvj65TkFeIt3i6aj5bIvJDzjjQQGs4o/sNoezg1F1kYap9Nu2jcUdpwzRSJTHMMzG0H7bZkn4rNQpImhuxWX2A==
+  dependencies:
+    base64-js "^1.0.2"
+    ieee754 "^1.1.4"
+
+buffer@^5.5.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.6.0.tgz#a31749dc7d81d84db08abf937b6b8c4033f62786"
+  integrity sha512-/gDYp/UtU0eA1ys8bOs9J6a+E/KWIY+DZ+Q2WESNUA0jFRsJOc0SNUO6xJ5SGA1xueg3NL65W6s+NY5l9cunuw==
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
@@ -2253,15 +2263,15 @@ component-emitter@^1.2.1:
   resolved "https://registry.npmjs.org/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
   integrity sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==
 
-compress-commons@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/compress-commons/-/compress-commons-2.1.1.tgz#9410d9a534cf8435e3fbbb7c6ce48de2dc2f0610"
-  integrity sha512-eVw6n7CnEMFzc3duyFVrQEuY1BlHR3rYsSztyG32ibGMW722i3C6IizEGMFmfMU+A+fALvBIwxN3czffTcdA+Q==
+compress-commons@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/compress-commons/-/compress-commons-3.0.0.tgz#833944d84596e537224dd91cf92f5246823d4f1d"
+  integrity sha512-FyDqr8TKX5/X0qo+aVfaZ+PVmNJHJeckFBlq8jZGSJOgnynhfifoyl24qaqdUdDIBe0EVTHByN6NAkqYvE/2Xg==
   dependencies:
     buffer-crc32 "^0.2.13"
     crc32-stream "^3.0.1"
     normalize-path "^3.0.0"
-    readable-stream "^2.3.6"
+    readable-stream "^2.3.7"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -4183,7 +4193,7 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@2, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.1, inherits@~2.0.3:
+inherits@2, inherits@^2.0.1, inherits@^2.0.3, inherits@^2.0.4, inherits@~2.0.1, inherits@~2.0.3:
   version "2.0.4"
   resolved "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
@@ -6723,6 +6733,28 @@ read-pkg@^3.0.0:
     string_decoder "^1.1.1"
     util-deprecate "^1.0.1"
 
+readable-stream@^2.3.7:
+  version "2.3.7"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.7.tgz#1eca1cf711aef814c04f62252a36a62f6cb23b57"
+  integrity sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.3"
+    isarray "~1.0.0"
+    process-nextick-args "~2.0.0"
+    safe-buffer "~5.1.1"
+    string_decoder "~1.1.1"
+    util-deprecate "~1.0.1"
+
+readable-stream@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.6.0.tgz#337bbda3adc0706bd3e024426a286d4b4b2c9198"
+  integrity sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==
+  dependencies:
+    inherits "^2.0.3"
+    string_decoder "^1.1.1"
+    util-deprecate "^1.0.1"
+
 readdirp@^2.2.1:
   version "2.2.1"
   resolved "https://registry.npmjs.org/readdirp/-/readdirp-2.2.1.tgz#0e87622a3325aa33e892285caf8b4e846529a525"
@@ -7694,12 +7726,23 @@ tar-fs@^2.0.0:
     pump "^3.0.0"
     tar-stream "^2.0.0"
 
-tar-stream@^2.0.0, tar-stream@^2.1.0:
+tar-stream@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/tar-stream/-/tar-stream-2.1.0.tgz#d1aaa3661f05b38b5acc9b7020efdca5179a2cc3"
   integrity sha512-+DAn4Nb4+gz6WZigRzKEZl1QuJVOLtAwwF+WUxy1fJ6X63CaGaUAxJRD2KEn1OMfcbCjySTYpNC6WmfQoIEOdw==
   dependencies:
     bl "^3.0.0"
+    end-of-stream "^1.4.1"
+    fs-constants "^1.0.0"
+    inherits "^2.0.3"
+    readable-stream "^3.1.1"
+
+tar-stream@^2.1.2:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/tar-stream/-/tar-stream-2.1.3.tgz#1e2022559221b7866161660f118255e20fa79e41"
+  integrity sha512-Z9yri56Dih8IaK8gncVPx4Wqt86NDmQTSh49XLZgjWpGZL9GK9HKParS2scqHCC4w6X9Gh2jwaU45V47XTKwVA==
+  dependencies:
+    bl "^4.0.1"
     end-of-stream "^1.4.1"
     fs-constants "^1.0.0"
     inherits "^2.0.3"
@@ -8462,11 +8505,11 @@ yauzl@^2.8.0:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.1.0"
 
-zip-stream@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.npmjs.org/zip-stream/-/zip-stream-2.1.2.tgz#841efd23214b602ff49c497cba1a85d8b5fbc39c"
-  integrity sha512-ykebHGa2+uzth/R4HZLkZh3XFJzivhVsjJt8bN3GvBzLaqqrUdRacu+c4QtnUgjkkQfsOuNE1JgLKMCPNmkKgg==
+zip-stream@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/zip-stream/-/zip-stream-3.0.1.tgz#cb8db9d324a76c09f9b76b31a12a48638b0b9708"
+  integrity sha512-r+JdDipt93ttDjsOVPU5zaq5bAyY+3H19bDrThkvuVxC0xMQzU1PJcS6D+KrP3u96gH9XLomcHPb+2skoDjulQ==
   dependencies:
     archiver-utils "^2.1.0"
-    compress-commons "^2.1.1"
-    readable-stream "^3.4.0"
+    compress-commons "^3.0.0"
+    readable-stream "^3.6.0"
