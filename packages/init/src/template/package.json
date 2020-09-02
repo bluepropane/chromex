@@ -30,7 +30,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-module-resolver": "^3.2.0",
-    "bestzip": "^2.1.4",
+    "bestzip": "^2.1.7",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.0.0",
     "cz-conventional-changelog": "2.1.0",
