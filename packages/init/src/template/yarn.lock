@@ -738,29 +738,29 @@
     webpack-sources "^1.1.0"
     yauzl "^2.8.0"
 
-"@chromex/cli@^0.0.4":
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/@chromex/cli/-/cli-0.3.1.tgz#d89a82b958529ea2ee49bfb480780b791768f9d5"
-  integrity sha512-kCq9Aa0CCCcpGjULdWomvpG1SvKJGP/zXawI9BAbq2r3Vemqh3vFnSPiQ0f5+BMfsJoCm7J5fLynP9dZkNHTLw==
+"@chromex/cli@^0.3.2":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@chromex/cli/-/cli-0.3.4.tgz#29110b92bfe28e06ecbbe7cbe791e2b51dce3473"
+  integrity sha512-eSvAQArWQxjORyQcquni6AGvtaDn8vOS0wBY5Xfs5bmQ2i7e/83m1lQJHFaRsX64IjQs+jcEuzXTTFGi1ygMTQ==
   dependencies:
     "@babel/core" "^7.6.4"
     "@babel/generator" "^7.7.2"
     "@babel/parser" "^7.7.3"
     "@babel/traverse" "^7.7.2"
     "@babel/types" "^7.7.2"
-    "@chromex/utils" "^0.0.9"
+    "@chromex/utils" "^0.0.11"
     commander "^3.0.2"
     del "^5.1.0"
     inquirer "^7.0.0"
     prettier "^1.19.1"
 
-"@chromex/core@^0.0.1":
-  version "0.1.5"
-  resolved "https://registry.npmjs.org/@chromex/core/-/core-0.1.5.tgz#b79549b38a6e173ab3cfc19fca8cd59a88a6904e"
-  integrity sha512-+FdJSXBOhQwey6hJuCsLgcNq68/2u1slP/EF+3iwCJDbgwml8dsquEAXQvY4tb3g724ulLYlianiEdGoJnmiRg==
+"@chromex/core@^0.1.6":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@chromex/core/-/core-0.1.8.tgz#bdfe9bf81b1c1c859ceb572e85ae564906e1c0c1"
+  integrity sha512-DZ4RJoiVJQplRlfkq7cMtRnFAQcmBxa3205815Yhaj9PGf5T8zSssptWSC9XRE5ew7EAqTaJa1CKf1avJ+CeYA==
   dependencies:
-    "@chromex/reloader" "^0.0.6"
-    "@chromex/utils" "^0.0.9"
+    "@chromex/reloader" "^0.0.8"
+    "@chromex/utils" "^0.0.11"
     commander "^3.0.2"
     create-file-webpack "^1.0.2"
     find-up "^4.1.0"
@@ -770,22 +770,17 @@
     sharp "^0.23.1"
     ws "^7.2.0"
 
-"@chromex/reloader@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/@chromex/reloader/-/reloader-0.0.6.tgz#977662f7e878eecedb61def8c96c477c6f8e4b14"
-  integrity sha512-02T+hbFOjUxNXTDouPjzHpuP4E+wldLD0vEhepgMwK+QanTdZsgW+OCTNVF93XAX0jSaGUGxW3heq0oIOuUfpA==
+"@chromex/reloader@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@chromex/reloader/-/reloader-0.0.8.tgz#13863da320319d704b3340d12c288252422a6369"
+  integrity sha512-UKMKELHJhAf7aahpcJG7A4vIePaxhTyYwLDVN3dfUXFI7pdlRsA95bU0uDa0znm0NYxb1ilSaEgZbvmwTQceaQ==
   dependencies:
     ncp "^2.0.0"
 
-"@chromex/sync-store@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/@chromex/sync-store/-/sync-store-0.0.4.tgz#a19d705e0e121d5ed57fc150bc0cfc3b2197b52c"
-  integrity sha512-cuwb9CqHegtxbEEeu5woeTxmOfLe/TT7SyxCmgOX3a559wVMCQtfGe19Xu7PMa6jWHZduX6BbFtaAKqvIdF+hw==
-
-"@chromex/utils@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.npmjs.org/@chromex/utils/-/utils-0.0.9.tgz#b982ee54feaefc7e123a3cfb41706fba26763ca0"
-  integrity sha512-jfeK/h0DiXPVHUf6OGR0ir1MNw3xxIoCvCoflZFdES6lnH0jJdflR+DWO94K+/UXOcOieVXIN4Ml9Yuu9te+MQ==
+"@chromex/utils@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@chromex/utils/-/utils-0.0.11.tgz#8b6789a766b9698bca04479d9a2c9c07ae57f0f1"
+  integrity sha512-HF099bmjLb9oxdrHY4ZPiLLzPMPGhGqbEI7gh68uYzBQbdZ4HaQO+wuzonargvoUjAMROnuvL/kziYBNmBU2hA==
   dependencies:
     find-up "^4.1.0"
     glob "^7.1.6"
@@ -1760,10 +1755,10 @@ bluebird@^3.5.5:
   resolved "https://registry.npmjs.org/bluebird/-/bluebird-3.7.1.tgz#df70e302b471d7473489acf26a93d63b53f874de"
   integrity sha512-DdmyoGCleJnkbp3nkbxTLJ18rjDsE4yCggEwKNXkeV123sPNfOCYeDoeuOY+F2FrSjO1YXcTU+dsy96KMy+gcg==
 
-bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
-  version "4.11.8"
-  resolved "https://registry.npmjs.org/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
-  integrity sha512-ItfYfPLkWHUjckQCk8xC+LwxgK8NYcXywGigJgSwOP8Y2iyWT4f2vsZnoOXTTbo+o5yXmIUJ4gn5538SO5S3gA==
+bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.11.9:
+  version "4.12.0"
+  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.12.0.tgz#775b3f278efbb9718eec7361f483fb36fbbfea88"
+  integrity sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==
 
 boolbase@~1.0.0:
   version "1.0.0"
@@ -1801,9 +1796,9 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-brorand@^1.0.1:
+brorand@^1.0.1, brorand@^1.1.0:
   version "1.1.0"
-  resolved "https://registry.npmjs.org/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
+  resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
   integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
 
 browser-process-hrtime@^0.1.2:
@@ -2986,17 +2981,17 @@ electron-to-chromium@^1.3.306:
   integrity sha512-IKDR/xCxKFhPts7h+VaSXS02Z1mznP3fli1BbXWXeN89i2gCzKraU8qLpEid8YzKcmZdZD3Mly3cn5/lY9xsBQ==
 
 elliptic@^6.0.0:
-  version "6.5.2"
-  resolved "https://registry.npmjs.org/elliptic/-/elliptic-6.5.2.tgz#05c5678d7173c049d8ca433552224a495d0e3762"
-  integrity sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==
+  version "6.5.4"
+  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.4.tgz#da37cebd31e79a1367e941b592ed1fbebd58abbb"
+  integrity sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==
   dependencies:
-    bn.js "^4.4.0"
-    brorand "^1.0.1"
+    bn.js "^4.11.9"
+    brorand "^1.1.0"
     hash.js "^1.0.0"
-    hmac-drbg "^1.0.0"
-    inherits "^2.0.1"
-    minimalistic-assert "^1.0.0"
-    minimalistic-crypto-utils "^1.0.0"
+    hmac-drbg "^1.0.1"
+    inherits "^2.0.4"
+    minimalistic-assert "^1.0.1"
+    minimalistic-crypto-utils "^1.0.1"
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -3995,7 +3990,7 @@ hash-base@^3.0.0:
 
 hash.js@^1.0.0, hash.js@^1.0.3:
   version "1.1.7"
-  resolved "https://registry.npmjs.org/hash.js/-/hash.js-1.1.7.tgz#0babca538e8d4ee4a0f8988d68866537a003cf42"
+  resolved "https://registry.yarnpkg.com/hash.js/-/hash.js-1.1.7.tgz#0babca538e8d4ee4a0f8988d68866537a003cf42"
   integrity sha512-taOaskGt4z4SOANNseOviYDvjEJinIkRgmp7LbKP2YTTmVxWBl87s/uzK9r+44BclBSp2X7K1hqeNfz9JbBeXA==
   dependencies:
     inherits "^2.0.3"
@@ -4006,9 +4001,9 @@ he@1.2.x:
   resolved "https://registry.npmjs.org/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
-hmac-drbg@^1.0.0:
+hmac-drbg@^1.0.1:
   version "1.0.1"
-  resolved "https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
+  resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
   integrity sha1-0nRXAQJabHdabFRXk+1QL8DGSaE=
   dependencies:
     hash.js "^1.0.3"
@@ -4183,7 +4178,7 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@2, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.1, inherits@~2.0.3:
+inherits@2, inherits@^2.0.1, inherits@^2.0.3, inherits@^2.0.4, inherits@~2.0.1, inherits@~2.0.3:
   version "2.0.4"
   resolved "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
@@ -5544,12 +5539,12 @@ mini-css-extract-plugin@^0.7.0:
 
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
-  resolved "https://registry.npmjs.org/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
+  resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
   integrity sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==
 
-minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
+minimalistic-crypto-utils@^1.0.1:
   version "1.0.1"
-  resolved "https://registry.npmjs.org/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
+  resolved "https://registry.yarnpkg.com/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
   integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
 
 minimatch@^3.0.4:
