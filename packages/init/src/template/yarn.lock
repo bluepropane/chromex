@@ -738,29 +738,29 @@
     webpack-sources "^1.1.0"
     yauzl "^2.8.0"
 
-"@chromex/cli@^0.0.4":
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/@chromex/cli/-/cli-0.3.1.tgz#d89a82b958529ea2ee49bfb480780b791768f9d5"
-  integrity sha512-kCq9Aa0CCCcpGjULdWomvpG1SvKJGP/zXawI9BAbq2r3Vemqh3vFnSPiQ0f5+BMfsJoCm7J5fLynP9dZkNHTLw==
+"@chromex/cli@^0.3.2":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@chromex/cli/-/cli-0.3.4.tgz#29110b92bfe28e06ecbbe7cbe791e2b51dce3473"
+  integrity sha512-eSvAQArWQxjORyQcquni6AGvtaDn8vOS0wBY5Xfs5bmQ2i7e/83m1lQJHFaRsX64IjQs+jcEuzXTTFGi1ygMTQ==
   dependencies:
     "@babel/core" "^7.6.4"
     "@babel/generator" "^7.7.2"
     "@babel/parser" "^7.7.3"
     "@babel/traverse" "^7.7.2"
     "@babel/types" "^7.7.2"
-    "@chromex/utils" "^0.0.9"
+    "@chromex/utils" "^0.0.11"
     commander "^3.0.2"
     del "^5.1.0"
     inquirer "^7.0.0"
     prettier "^1.19.1"
 
-"@chromex/core@^0.0.1":
-  version "0.1.5"
-  resolved "https://registry.npmjs.org/@chromex/core/-/core-0.1.5.tgz#b79549b38a6e173ab3cfc19fca8cd59a88a6904e"
-  integrity sha512-+FdJSXBOhQwey6hJuCsLgcNq68/2u1slP/EF+3iwCJDbgwml8dsquEAXQvY4tb3g724ulLYlianiEdGoJnmiRg==
+"@chromex/core@^0.1.6":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@chromex/core/-/core-0.1.8.tgz#bdfe9bf81b1c1c859ceb572e85ae564906e1c0c1"
+  integrity sha512-DZ4RJoiVJQplRlfkq7cMtRnFAQcmBxa3205815Yhaj9PGf5T8zSssptWSC9XRE5ew7EAqTaJa1CKf1avJ+CeYA==
   dependencies:
-    "@chromex/reloader" "^0.0.6"
-    "@chromex/utils" "^0.0.9"
+    "@chromex/reloader" "^0.0.8"
+    "@chromex/utils" "^0.0.11"
     commander "^3.0.2"
     create-file-webpack "^1.0.2"
     find-up "^4.1.0"
@@ -770,22 +770,17 @@
     sharp "^0.23.1"
     ws "^7.2.0"
 
-"@chromex/reloader@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/@chromex/reloader/-/reloader-0.0.6.tgz#977662f7e878eecedb61def8c96c477c6f8e4b14"
-  integrity sha512-02T+hbFOjUxNXTDouPjzHpuP4E+wldLD0vEhepgMwK+QanTdZsgW+OCTNVF93XAX0jSaGUGxW3heq0oIOuUfpA==
+"@chromex/reloader@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@chromex/reloader/-/reloader-0.0.8.tgz#13863da320319d704b3340d12c288252422a6369"
+  integrity sha512-UKMKELHJhAf7aahpcJG7A4vIePaxhTyYwLDVN3dfUXFI7pdlRsA95bU0uDa0znm0NYxb1ilSaEgZbvmwTQceaQ==
   dependencies:
     ncp "^2.0.0"
 
-"@chromex/sync-store@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/@chromex/sync-store/-/sync-store-0.0.4.tgz#a19d705e0e121d5ed57fc150bc0cfc3b2197b52c"
-  integrity sha512-cuwb9CqHegtxbEEeu5woeTxmOfLe/TT7SyxCmgOX3a559wVMCQtfGe19Xu7PMa6jWHZduX6BbFtaAKqvIdF+hw==
-
-"@chromex/utils@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.npmjs.org/@chromex/utils/-/utils-0.0.9.tgz#b982ee54feaefc7e123a3cfb41706fba26763ca0"
-  integrity sha512-jfeK/h0DiXPVHUf6OGR0ir1MNw3xxIoCvCoflZFdES6lnH0jJdflR+DWO94K+/UXOcOieVXIN4Ml9Yuu9te+MQ==
+"@chromex/utils@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@chromex/utils/-/utils-0.0.11.tgz#8b6789a766b9698bca04479d9a2c9c07ae57f0f1"
+  integrity sha512-HF099bmjLb9oxdrHY4ZPiLLzPMPGhGqbEI7gh68uYzBQbdZ4HaQO+wuzonargvoUjAMROnuvL/kziYBNmBU2hA==
   dependencies:
     find-up "^4.1.0"
     glob "^7.1.6"
@@ -5291,9 +5286,9 @@ lodash.union@^4.6.0:
   integrity sha1-SLtQiECfFvGCFmZkHETdGqrjzYg=
 
 lodash@^4.17.10, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.1:
-  version "4.17.15"
-  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 longest@^1.0.1:
   version "1.0.1"
