@@ -738,29 +738,29 @@
     webpack-sources "^1.1.0"
     yauzl "^2.8.0"
 
-"@chromex/cli@^0.0.4":
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/@chromex/cli/-/cli-0.3.1.tgz#d89a82b958529ea2ee49bfb480780b791768f9d5"
-  integrity sha512-kCq9Aa0CCCcpGjULdWomvpG1SvKJGP/zXawI9BAbq2r3Vemqh3vFnSPiQ0f5+BMfsJoCm7J5fLynP9dZkNHTLw==
+"@chromex/cli@^0.3.2":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@chromex/cli/-/cli-0.3.4.tgz#29110b92bfe28e06ecbbe7cbe791e2b51dce3473"
+  integrity sha512-eSvAQArWQxjORyQcquni6AGvtaDn8vOS0wBY5Xfs5bmQ2i7e/83m1lQJHFaRsX64IjQs+jcEuzXTTFGi1ygMTQ==
   dependencies:
     "@babel/core" "^7.6.4"
     "@babel/generator" "^7.7.2"
     "@babel/parser" "^7.7.3"
     "@babel/traverse" "^7.7.2"
     "@babel/types" "^7.7.2"
-    "@chromex/utils" "^0.0.9"
+    "@chromex/utils" "^0.0.11"
     commander "^3.0.2"
     del "^5.1.0"
     inquirer "^7.0.0"
     prettier "^1.19.1"
 
-"@chromex/core@^0.0.1":
-  version "0.1.5"
-  resolved "https://registry.npmjs.org/@chromex/core/-/core-0.1.5.tgz#b79549b38a6e173ab3cfc19fca8cd59a88a6904e"
-  integrity sha512-+FdJSXBOhQwey6hJuCsLgcNq68/2u1slP/EF+3iwCJDbgwml8dsquEAXQvY4tb3g724ulLYlianiEdGoJnmiRg==
+"@chromex/core@^0.1.6":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@chromex/core/-/core-0.1.8.tgz#bdfe9bf81b1c1c859ceb572e85ae564906e1c0c1"
+  integrity sha512-DZ4RJoiVJQplRlfkq7cMtRnFAQcmBxa3205815Yhaj9PGf5T8zSssptWSC9XRE5ew7EAqTaJa1CKf1avJ+CeYA==
   dependencies:
-    "@chromex/reloader" "^0.0.6"
-    "@chromex/utils" "^0.0.9"
+    "@chromex/reloader" "^0.0.8"
+    "@chromex/utils" "^0.0.11"
     commander "^3.0.2"
     create-file-webpack "^1.0.2"
     find-up "^4.1.0"
@@ -770,22 +770,17 @@
     sharp "^0.23.1"
     ws "^7.2.0"
 
-"@chromex/reloader@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/@chromex/reloader/-/reloader-0.0.6.tgz#977662f7e878eecedb61def8c96c477c6f8e4b14"
-  integrity sha512-02T+hbFOjUxNXTDouPjzHpuP4E+wldLD0vEhepgMwK+QanTdZsgW+OCTNVF93XAX0jSaGUGxW3heq0oIOuUfpA==
+"@chromex/reloader@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@chromex/reloader/-/reloader-0.0.8.tgz#13863da320319d704b3340d12c288252422a6369"
+  integrity sha512-UKMKELHJhAf7aahpcJG7A4vIePaxhTyYwLDVN3dfUXFI7pdlRsA95bU0uDa0znm0NYxb1ilSaEgZbvmwTQceaQ==
   dependencies:
     ncp "^2.0.0"
 
-"@chromex/sync-store@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/@chromex/sync-store/-/sync-store-0.0.4.tgz#a19d705e0e121d5ed57fc150bc0cfc3b2197b52c"
-  integrity sha512-cuwb9CqHegtxbEEeu5woeTxmOfLe/TT7SyxCmgOX3a559wVMCQtfGe19Xu7PMa6jWHZduX6BbFtaAKqvIdF+hw==
-
-"@chromex/utils@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.npmjs.org/@chromex/utils/-/utils-0.0.9.tgz#b982ee54feaefc7e123a3cfb41706fba26763ca0"
-  integrity sha512-jfeK/h0DiXPVHUf6OGR0ir1MNw3xxIoCvCoflZFdES6lnH0jJdflR+DWO94K+/UXOcOieVXIN4Ml9Yuu9te+MQ==
+"@chromex/utils@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@chromex/utils/-/utils-0.0.11.tgz#8b6789a766b9698bca04479d9a2c9c07ae57f0f1"
+  integrity sha512-HF099bmjLb9oxdrHY4ZPiLLzPMPGhGqbEI7gh68uYzBQbdZ4HaQO+wuzonargvoUjAMROnuvL/kziYBNmBU2hA==
   dependencies:
     find-up "^4.1.0"
     glob "^7.1.6"
@@ -1899,9 +1894,9 @@ buffer-crc32@^0.2.1, buffer-crc32@^0.2.13, buffer-crc32@~0.2.3:
   integrity sha1-DTM+PwDqxQqhRUq9MO+MKl2ackI=
 
 buffer-from@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
-  integrity sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.2.tgz#2b146a6fd72e80b4f55d255f35ed59a3a9a41bd5"
+  integrity sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==
 
 buffer-xor@^1.0.3:
   version "1.0.3"
@@ -7307,9 +7302,9 @@ source-map-resolve@^0.5.0:
     urix "^0.1.0"
 
 source-map-support@^0.5.6, source-map-support@~0.5.12:
-  version "0.5.16"
-  resolved "https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.16.tgz#0ae069e7fe3ba7538c64c98515e35339eac5a042"
-  integrity sha512-efyLRJDr68D9hBBNIPWFjhpFzURh+KJykQwvMyW5UiZzYwoF6l4YMMDIJJEyFWxWCqfyxLzz6tSfUFR+kXXsVQ==
+  version "0.5.21"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.21.tgz#04fe7c7f9e1ed2d662233c28cb2b35b9f63f6e4f"
+  integrity sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
@@ -7326,7 +7321,7 @@ source-map@^0.5.0, source-map@^0.5.6:
 
 source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
-  resolved "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
 spawnd@^4.0.0:
@@ -7746,9 +7741,9 @@ terser-webpack-plugin@^1.3.0, terser-webpack-plugin@^1.4.1:
     worker-farm "^1.7.0"
 
 terser@^4.1.2:
-  version "4.4.0"
-  resolved "https://registry.npmjs.org/terser/-/terser-4.4.0.tgz#22c46b4817cf4c9565434bfe6ad47336af259ac3"
-  integrity sha512-oDG16n2WKm27JO8h4y/w3iqBGAOSCtq7k8dRmrn4Wf9NouL0b2WpMHGChFGZq4nFAQy1FsNJrVQHfurXOSTmOA==
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-4.8.1.tgz#a00e5634562de2239fd404c649051bf6fc21144f"
+  integrity sha512-4GnLC0x667eJG0ewJTa6z/yXrbLGv80D9Ru6HIpCQmO+Q4PfEtBFi0ObSckqwL6VyQv/7ENJieXHo2ANmdQwgw==
   dependencies:
     commander "^2.20.0"
     source-map "~0.6.1"
