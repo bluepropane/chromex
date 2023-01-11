@@ -23,7 +23,7 @@
     "gatsby-remark-prismjs": "3.3.12",
     "gatsby-source-filesystem": "2.1.21",
     "gatsby-transformer-json": "2.2.7",
-    "gatsby-transformer-remark": "^2.6.21",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "2.2.13",
     "katex": "0.11.0",
     "prismjs": "1.17.1",
